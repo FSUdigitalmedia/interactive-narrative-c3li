@@ -8,6 +8,9 @@
 :: StoryTitle
 Bottom Dweller
 
+:: StoryInit
+
+
 :: Start
 
 From as early as you can remember you’ve been in Frankie’s Fish and Feed.  
@@ -36,10 +39,10 @@ GF: “Welcome newcomer! Quite interesting, you are alone. Usually the shrimpies
 Another goldfish murmurs, “At least we have a replacement… Since the incident…”
 
 GF: “Let’s not delve into that right now! We don’t want to scare ‘em! I am sorry kiddo…. How rude of me I didn’t even ask for your name!”
+<<textbox "$name" "kiddo" "continue1">>
 
-Name ____
-
-GF: “Hmm… That’s interesting! I am Prince Shiny Fins, and I am the elected leader of this tank. Now ____, let me explain some of the rules here!”
+:: continue1
+GF: “Hmm… That’s interesting! I am Prince Shiny Fins, and I am the elected leader of this tank. Now <<print $name>>, let me explain some of the rules here!”
 
 You: Rules?
 

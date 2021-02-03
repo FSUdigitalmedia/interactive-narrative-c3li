@@ -3,7 +3,7 @@ You rush towards familiar faces. There is a small colony of shrimp hanging out i
 
 You: Hello! I am new here! Mind if I sit with y’all for a bit?
 
-Shrimp1: Hello ___! I’m Shrebecca! Welcome to Fern Park! This is where most of the shrimp get together if they aren’t working. The Goldfish let us know you were coming. We are so excited to see new shrimp enter the tank!
+Shrimp1: Hello <<print $name>>! I’m Shrebecca! Welcome to Fern Park! This is where most of the shrimp get together if they aren’t working. The Goldfish let us know you were coming. We are so excited to see new shrimp enter the tank!
 
 Shrimp2: Especially since… (starts sobbing)
 
