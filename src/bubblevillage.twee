@@ -13,7 +13,7 @@ Snail2: Quiet Shelly! Sorry, she has been a mess trying to get our affairs in or
 
 You: Snabies?
 
-Snail1: SNAIL BABIES!
+Snail1: SNAIL BABIES!!!
 
 Snail2: Yes… Snail babies. Ms. Fibonacci just laid a few clutches of eggs recently, so we are planning a baby shower! Unfortunately, since Mr. and Ms. Fibonacci retired, our village has gotten too dirty to celebrate anything just yet. Shelly has planned a baby shower, but there’s still so much cleaning up left to do.
 
@@ -25,3 +25,15 @@ Snail2: It isn’t like you were going very quickly to begin with… (laughs)
 You: Yeah, I really don’t mind. I have my work cut out for me anyways, so I may as well help out where I can.
 
 Snail2: Thank you so much!
+
+[Help clean up for the baby shower. | babyshowerclean]
+
+:: babyshowerclean
+Here there will be an open plane of gravel but it looks kind of messy/covered in algae, etc. You click on the colored gravel until it is all clean.
+When you are finished there will be a screen that says:
+
+Snail 1: Wow! I haven't seen Bubble Village sparkle like this since we moved in! Thank you so much <<print $name>>. Here is a token of my gratitude. I have been holding onto this for a while.
+[It's a green bean! | greenbean]
+This will be added to your inventory, you can snack on this now or later.
+
+Snail 2: Be sure to come visit us again! We could always use a hand.

@@ -1,6 +1,6 @@
 :: palace
 
-GF: Ahh! Welcome in ____! We have been waiting for you to arrive!
+GF: Ahh! Welcome in <<print $name>>! We have been waiting for you to arrive!
 
 GF2: *mumbles* It’s about time… my room is filthy…
 
@@ -16,13 +16,18 @@ GF: Aha! Here are your list of tasks. Some are based on cleaning up the general 
 
 You: Yup!
 
-1: Princess Floppy’s Room
-2: Filter Clean up
-3: Orangey’s Room
-4: Pebble Perfection
-		5 PP Section 2
-		6 PP Section 3
-7: Mr. Carnival
-8: Palace Main Lobby
-9: Landscaping
-10: Mr. Shiny Fin’s Office
+[Princess Floppy’s Room | pfr]
+:: pfr
+[Orangey's Room|orangey]
+:: orangey
+[Filter Clean Up|FCU]
+:: FCU
+[Pebble Perfection|ppentry]
+:: ppentry
+[Mr. Carnival |carnival]
+:: carnival
+[Palance Main Lobby|Lobby]
+:: Lobby
+[Mr. Shiny Fin’s Office|SFO]
+:: SFO
+

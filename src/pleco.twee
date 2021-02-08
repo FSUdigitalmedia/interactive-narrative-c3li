@@ -1,7 +1,7 @@
 :: pleco
 
 You swim over to a large pleco slurping on some algae on the glass.
-You: Hello! I thought I would introduce myself. I am ___. I am new here.
+You: Hello! I thought I would introduce myself. I am <<print $name>>. I am new here.
 Pleco: Ahh.. I heard there would be a new shrimp in the tank since the incident. Nice to meet you kid.
 
 You: Are you the only Pleco here?
