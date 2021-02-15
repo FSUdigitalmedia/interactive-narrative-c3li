@@ -100,7 +100,16 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://F3BD8DC3-3BB1-425B-9F6C-FFC5EE93E3AC// --><tw-storydata name="Bottom Dweller" startnode="4" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="F3BD8DC3-3BB1-425B-9F6C-FFC5EE93E3AC" zoom="1" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="bubblevillage" tags="" position="100,100" size="100,100">You: Hello! I am new to the tank-
+	<!-- UUID://F3BD8DC3-3BB1-425B-9F6C-FFC5EE93E3AC// --><tw-storydata name="Bottom Dweller" startnode="8" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="F3BD8DC3-3BB1-425B-9F6C-FFC5EE93E3AC" zoom="1" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript">/* twine-user-script #1: "meters.min.js" */
+// meters.min.js, for SugarCube 2, by Chapel
+// v1.0.1, 2021-01-22, 404cc7678295ca61a8b0b8bc3fa5d54dba6ac858
+;!function(){"use strict";var t=!0,e=!1,s=!1,i={full:"#2ECC40",empty:"#FF4136",back:"#DDDDDD",height:"12px",width:"180px",animate:400,easing:"swing",text:"#111111",label:"",align:"center"},n=["center","left","right"],r=["swing","linear"];function a(t,e){return t&&"string"==typeof t&&(t=t.toLowerCase().trim())?t:e||""}function o(t){return t<.5?2*t*t:(4-2*t)*t-1}function l(t,e){if(!(this instanceof l))return new l(t,e);var s=clone(i);this.settings=Object.assign(s,t),this.settings.align=a(this.settings.align),this.settings.easing=a(this.settings.easing),n.includes(this.settings.align)||(this.settings.align="center"),r.includes(this.settings.easing)||(this.settings.easing="swing"),e=Number(e),Number.isNaN(e)&&(e=1),e=Math.clamp(e,0,1),this.value=e;var h=$(document.createElement("div")).addClass("chapel-meter").attr({"data-val":e,"data-label":this.settings.label}).css({position:"relative","background-color":this.settings.back,height:this.settings.height,width:this.settings.width,overflow:"hidden"}),g=$(document.createElement("div")).addClass("meter-label").css({top:0,right:0,"font-size":this.settings.height,"font-weight":"bold","line-height":"100%",width:"100%",height:"100%","vertical-align":"middle","text-align":this.settings.align,color:this.settings.text,"z-index":1,position:"relative",bottom:"100%"}).wiki(this.settings.label).appendTo(h),u=$(document.createElement("div")).addClass("meter-top").css({"background-color":this.settings.full,opacity:o(this.value),width:"100%",height:"100%","z-index":0}),c=$(document.createElement("div")).addClass("meter-bottom").css({position:"absolute",top:0,left:0,"background-color":this.settings.empty,opacity:1,width:100*this.value+"%",height:"100%","z-index":0}).append(u).appendTo(h);this.$element=h,this.$bars={top:u,bottom:c},this.$label=g,g.css("font-size",parseInt(h.css("height"),10)<parseInt($(".passage").css("font-size"),10)?h.css("height"):$(".passage").css("font-size")),g.css("line-height",h.css("height"))}Object.assign(l,{_list:new Map,is:function(t){return t instanceof l},has:function(t){return l._list.has(t)&&l.is(l._list.get(t))},get:function(t){return l.has(t)?l._list.get(t):null},del:function(t){l.has(t)&&l._list.delete(t)},add:function(t,s,i){if(!l.has(t)||e){Object.assign(s,{id:t});var n=new l(s,i);return l._list.set(t,n),n}console.error('Meter "'+t+'" already exists.')},_emit:function(t,e){l.is(t)&&t.$element.trigger({type:":"+e,meter:t})}}),Object.assign(l.prototype,{constructor:l,_label:function(t){var e=this;function s(){e.$label.empty().wiki(e.settings.label),e.$label.css("font-size",parseInt(e.$element.css("height"),10)<parseInt(e.$element.parent().css("font-size"),10)?e.$element.css("height"):e.$element.parent().css("font-size")),e.$label.css("line-height",e.$element.css("height"))}return t?setTimeout(s,Engine.minDomActionDelay):s(),this},_width:function(){var t=this;return this.$bars.bottom.animate({width:100*this.value+"%"},this.settings.animate,this.settings.easing,(function(){l._emit(t,"meter-animation-complete")})),this},_color:function(){return this.$bars.top.animate({opacity:o(this.value)},this.settings.animate,this.settings.easing),this},animate:function(){return l._emit(this,"meter-animation-start"),this._color()._width()._label()},val:function(t){return void 0!==t&&(t=Number(t),Number.isNaN(t)&&(t=1),t=Math.clamp(t,0,1),this.value=t,this.animate()),this.value},options:function(t){return t&&"object"==typeof t&&Object.assign(this.settings,t),this.settings},unwrap:function(){return this.$element[0]},place:function(t,e){var s=$(document.createElement("span"));return t instanceof jQuery||(t=$(t)),t[0]||console.warn("meter#place() -> no valid target"),e&&"object"==typeof e&&(e.classes&&(Array.isArray(e.classes)||"string"==typeof e.classes)&&s.addClass(e.classes),e.attr&&"object"==typeof e.attr&&s.attr(e.attr)),t.append(s.append(this.$element)),this._label(!0),this},on:function(t,e){return"function"!=typeof e?this:t&&"string"==typeof t&&t.trim()?(t=t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "),this.$element.on(t,e),this):this},one:function(t,e){return"function"!=typeof e?this:t&&"string"==typeof t&&t.trim()?(t=t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "),this.$element.one(t,e),this):this},off:function(t){return t=t&&"string"==typeof t&&t.trim()?t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "):".userland",this.$element.off(t),this},click:function(t,e){return this.$element.ariaClick(t,e),this},clone:function(){return new l(this.settings,this.value)},toJSON:function(){return JSON.reviveWrapper("new setup.Meter("+JSON.stringify(this.settings)+", "+this.value+")")}}),setup.Meter=l,t&&(window.Meter=window.Meter||l),Macro.add("newmeter",{tags:["colors","sizing","animation","label"],handler:function(){if(State.length>0&&!s)return this.error("The `<<newmeter>>` macro must be called in your `StoryInit` special passage. Seriously. No excuses. --Love, Chapel");if(this.args.length<1)return this.error("The `<<newmeter>>` macro requires at least one argument: a meter name.");var t=this.args[0],i=null,n=null,r=null,a=null;if("string"!=typeof t)return this.error("Invalid meter name.");if(t=t.trim(),l.has(t)&&!e)return this.error('Cannot clobber the existing meter "'+t+'".');this.payload.length&&(i=this.payload.find((function(t){return"colors"===t.name})),n=this.payload.find((function(t){return"sizing"===t.name})),r=this.payload.find((function(t){return"animation"===t.name})),a=this.payload.find((function(t){return"label"===t.name})));var o={};if(i){if(!i.args.length)return this.error("No arguments passed to the `<<colors>>` tag.");switch(i.args.length){case 1:o.empty=i.args[0],o.full="transparent";break;case 2:o.full=i.args[0],o.empty=i.args[1];break;default:o.full=i.args[0],o.empty=i.args[1],o.back=i.args[2]}}if(n){if(!n.args.length)return this.error("No arguments passed to the `<<sizing>>` tag.");o.width=n.args[0],n.args[1]&&(o.height=n.args[1])}if(r){if(!r.args.length)return this.error("No arguments passed to the `<<animation>>` tag.");if("boolean"!=typeof r.args[0]||r.args[0]){if("string"!=typeof r.args[0])return this.error("The argument to the `<<animation>>` tag should be `true`, `false`, or a valid CSS time value.");o.animate=Util.fromCssTime(r.args[0])}else o.animate=0;r.args[1]&&["swing","linear"].includes(r.args[1])&&(o.easing=r.args[1])}if(a){var h=a.args[0];if(!h||"string"!=typeof h)return this.error("The labelText argument for the `<<label>>` tag is required.");o.label=h.trim(),a.args[1]&&"string"==typeof a.args[1]&&(o.text=a.args[1]),a.args[2]&&"string"==typeof a.args[2]&&(o.align=a.args[2])}l.add(t,o,this.args[1])}}),Macro.add("showmeter",{handler:function(){if(this.args.length<1)return this.error("This macro requires at least one argument: the meter's name.");var t=this.args[0];if("string"!=typeof t)return this.error("Invalid meter name.");t=t.trim();var e=l.get(t);if(!e||!l.is(e))return this.error('The meter "'+t+'" does not exist.');"number"==typeof this.args[1]&&e.val(this.args[1]),e.place(this.output,{classes:"macro-"+this.name,attr:{id:"meter-"+Util.slugify(t)}})}}),Macro.add("updatemeter",{handler:function(){if(this.args.length<2)return this.error("This macro requires two arguments: the meter's name and a value.");var t=this.args[0];if("string"!=typeof t)return this.error("Invalid meter name.");t=t.trim();var e=l.get(t);if(!e||!l.is(e))return this.error('The meter "'+t+'" does not exist.');e.val(this.args[1])}})}();
+// end meters.min.js
+/* twine-user-script #2: "speech.min.js" */
+// speech.min.js, for SugarCube 2, by Chapel
+// v1.0.1, 2021-01-22, 404cc7678295ca61a8b0b8bc3fa5d54dba6ac858
+;!function(){"use strict";var t=new Map;function a(a,e){if(State.length)throw new Error("addCharacter() -> must be called before story starts");a&&e?(t.has(a)&&console.error('addCharacter() -> overwriting character "'+a+'"'),t.set(a,e)):console.error("addCharacter() -> invalid arguments")}function e(a,e,r,s){var n=$(document.createElement("div")).addClass(Util.slugify(e)+" say"),c=$(document.createElement("img")).attr("src",s||t.get(e)||"");return c.attr("src")&&c.attr("src").trim()&&n.append(c),n.append($(document.createElement("p")).wiki(e.toUpperFirst())).append($(document.createElement("p")).wiki(r)),a&&(a instanceof $||(a=$(a)),n.appendTo(a)),n}setup.say=e,setup.addCharacter=a,Macro.add("character",{handler:function(){a(this.args[0],this.args[1])}}),$(document).one(":passagestart",(function(){var a=Array.from(t.keys());a.push("say"),Macro.add(a,{tags:null,handler:function(){"say"!==this.name?e(this.output,this.name,this.payload[0].contents):e(this.output,this.args[0],this.payload[0].contents,this.args[1])}})}))}();
+// end speech.min.js</script><tw-passagedata pid="1" name="bubblevillage" tags="" position="100,100" size="100,100">You: Hello! I am new to the tank-
 
 Snail1: Whatever, whatever! The Goldies let us know! Please just leave us alone we have so much to do!
 
@@ -114,7 +123,7 @@ Snail2: Quiet Shelly! Sorry, she has been a mess trying to get our affairs in or
 
 You: Snabies?
 
-Snail1: SNAIL BABIES!
+Snail1: SNAIL BABIES!!!
 
 Snail2: Yes… Snail babies. Ms. Fibonacci just laid a few clutches of eggs recently, so we are planning a baby shower! Unfortunately, since Mr. and Ms. Fibonacci retired, our village has gotten too dirty to celebrate anything just yet. Shelly has planned a baby shower, but there’s still so much cleaning up left to do.
 
@@ -125,7 +134,25 @@ Snail2: It isn’t like you were going very quickly to begin with… (laughs)
 
 You: Yeah, I really don’t mind. I have my work cut out for me anyways, so I may as well help out where I can.
 
-Snail2: Thank you so much!</tw-passagedata><tw-passagedata pid="2" name="fernpark" tags="" position="225,100" size="100,100">You rush towards familiar faces. There is a small colony of shrimp hanging out in some plants in the corner of the tank.
+Snail2: Thank you so much!
+
+[Help clean up for the baby shower. | babyshowerclean]</tw-passagedata><tw-passagedata pid="2" name="babyshowerclean" tags="" position="225,100" size="100,100">Here there will be an open plane of gravel but it looks kind of messy/covered in algae, etc. You click on the colored gravel until it is all clean.
+When you are finished there will be a screen that says:
+
+Snail 1: Wow! I haven&#39;t seen Bubble Village sparkle like this since we moved in! Thank you so much &lt;&lt;print $name&gt;&gt;. Here is a token of my gratitude. I have been holding onto this for a while.
+[It&#39;s a green bean! | greenbean]
+This will be added to your inventory, you can snack on this now or later.
+
+Snail 2: Be sure to come visit us again! We could always use a hand.</tw-passagedata><tw-passagedata pid="3" name="warnsnails" tags="" position="350,100" size="100,100">Snail 1: The whole shrimp colony... What the tank is going on?
+You: We must act fast. The Goldfish have plans to eat anyone who wants to retire early. I just tried and he said he didn&#39;t have enough pellets to pay my retirement, but he is hoarding the stash of pellets! There is plenty to go around!
+Snail 2: I knew it! We haven&#39;t been paid nearly enough recently! He kept saying the Boss wasn&#39;t dropping enough to feed us!
+You: It&#39;s not true! 
+Snail 1: We must band together against this evil. This isn&#39;t fair.
+Snail 2: We are putting our lives at sake...
+Snail 1: We weren&#39;t really living before this... Let&#39;s do it.
+
+You: Thank you snails... Let&#39;s go to the palace!
+Pleco: I know you aren&#39;t forgetting me... Right?</tw-passagedata><tw-passagedata pid="4" name="fernpark" tags="" position="475,100" size="100,100">You rush towards familiar faces. There is a small colony of shrimp hanging out in some plants in the corner of the tank.
 
 You: Hello! I am new here! Mind if I sit with y’all for a bit?
 
@@ -149,41 +176,54 @@ Shrimp3: Fine! Don’t believe me! I know what I saw!
 Shrimp1: Don’t mind him. His mind has probably gone hazy since the event. Anyways, you have nothing to fear here. All of our tank mates are pretty harmless. The Goldies can be rude sometimes, but they feed us, so we try not to complain.
 
 You: Thank you for being so welcoming. I should probably go see them soon now anyways…
-Shrimp1: Understandable kiddo! Be sure to get acquainted with some of the other tank mates too! Know you’re always welcome here in Fern Park.</tw-passagedata><tw-passagedata pid="3" name="StoryInit" tags="" position="350,100" size="100,100"></tw-passagedata><tw-passagedata pid="4" name="Start" tags="" position="475,100" size="100,100">From as early as you can remember you’ve been in Frankie’s Fish and Feed.  
-You have always been comfortable in your small tank because you were surrounded by some of your best shrimpy friends. 
-There are a few snails in your tank as well, but they don’t speak much, so you usually leave them be. 
+Shrimp1: Understandable kiddo! Be sure to get acquainted with some of the other tank mates too! Know you’re always welcome here in Fern Park. 
 
-Today started out just like any other day,  until a net splashed into your tank. 
-You attempted to swim away, but it scooped you up. 
-You are placed in a plastic bag with some of your tank water. 
-You didn’t even get to say goodbye to your friends…
+[Meet more shrimp|meetshrimp]</tw-passagedata><tw-passagedata pid="5" name="meetshrimp" tags="" position="600,100" size="100,100"></tw-passagedata><tw-passagedata pid="6" name="warn" tags="" position="725,100" size="100,100">Briskly, I swim towards Fern Park... I will let the shrimp know first...
+You: This is not a drill... PSF has plans to eat us if we want to retire early! He is out to get me right now as I speak!
+Shrebecca: Wait a minute! How can we trust you!
+You: I saw the food stash! He told me he couldn&#39;t pay me my wages, but it is because he is hoarding the food and threatening anyone who comes close to collecting their wages.
+Kevin: I believe him.
+Shrebecca: Well... He can try to stop all of us... One shrimp versus a fish like that can only do so much, but when we work together... We may have a chance at change.
+You: Let&#39;s do it!
+Shrebecca: Let&#39;s warn the snails as well!
+[Warn snails!|warnsnails]</tw-passagedata><tw-passagedata pid="7" name="StoryInit" tags="" position="850,100" size="100,100">&lt;&lt;character &#39;Prince Shiny Fins&#39; &#39;assets/sample fish.jpg&#39;&gt;&gt;
+
+
+[[Continue|meters2]]</tw-passagedata><tw-passagedata pid="8" name="Start" tags="" position="975,100" size="100,100">From as early as I can remember I’ve been in Frankie’s Fish and Feed.  
+I have always been comfortable in my small tank because I was surrounded by some of my best shrimpy friends. 
+There are a few snails in my tank as well, but they don’t speak much, so I usually leave them be. 
+
+Today started out just like any other day,  until a net splashed into my tank. 
+I attempted to swim away, but it scooped me up. 
+I was placed in a plastic bag with some of my tank water. 
+I didn’t even get to say goodbye to my friends…
 
 The next few moments are a blur. 
-You only see the reflective plastic. 
-You are shuffled around a bit, and suddenly, your bag is placed in an area with familiar walls. 
-It is another tank, but it isn’t your home.
+I can only see the reflective plastic. 
+I am shuffled around a bit, and suddenly, my bag is placed in an area with familiar walls. 
+It is another tank, but it isn’t my home.
 
-As you peer through the plastic, you notice a beautiful, bustling tank. 
+As I peer through the plastic, I can&#39;t help but to notice a beautiful, bustling tank. 
 There are many snails, fish, and even other shrimp. 
-You relax a bit. You realize quickly this will be your new home. 
-You try to get comfortable as the water temperature changes slowly…
+I finally relax a bit. You realize quickly this will be your new home. 
+I try to get comfortable as the water temperature changes slowly…
 
 *tap tap tap*
-You awaken to 5 goldfish staring at you from outside the plastic.
+I suddenly awaken to 5 goldfish staring at me from outside the plastic.
 GF: “Welcome newcomer! Quite interesting, you are alone. Usually the shrimpies come with some friends…”
 
 Another goldfish murmurs, “At least we have a replacement… Since the incident…”
 
-GF: “Let’s not delve into that right now! We don’t want to scare ‘em! I am sorry kiddo…. How rude of me I didn’t even ask for your name!”
-&lt;&lt;textbox &quot;$name&quot; &quot;kiddo&quot; &quot;continue1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="continue1" tags="" position="600,100" size="100,100">GF: “Hmm… That’s interesting! I am Prince Shiny Fins, and I am the elected leader of this tank. Now &lt;&lt;print $name&gt;&gt;, let me explain some of the rules here!”
+GF: “Let’s not delve into that right now! We don’t want to scare him! I am sorry kiddo…. How rude of me I didn’t even ask for your name!”
+&lt;&lt;textbox &quot;$name&quot; &quot;&quot; &quot;continue1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="continue1" tags="" position="1100,100" size="100,100">&lt;&lt;say &#39;Prince Shiny Fins&#39;&gt;&gt; Hmm… That’s interesting! I am Prince Shiny Fins, and I am the elected leader of this tank. Now &lt;&lt;print $name&gt;&gt;, let me explain some of the rules here! &lt;&lt;/say&gt;&gt;
 
-You: Rules?
+&lt;&lt;say &#39;$name&#39;&gt;&gt; Rules? &lt;&lt;/say&gt;&gt;
 
-GF: “Ah yes! We have a very advanced society here, and we know you will come to really love it here! As a shrimp, you have a selection of duties you must perform in order to keep up the scenery and ensure our tank is kept pristine! In exchange for doing tasks, you will be rewarded through our Pellet system. Once the big boss comes through with the Pellets, we will divide them out equally amongst our working residents. I will explain more after you finally enter the tank. Once the Boss finally lets you in, be sure to see me in the Palace. I will explain some of the benefits in more detail.”
+&lt;&lt;say &#39;Prince Shiny Fins&#39;&gt;&gt; Ah yes! We have a very advanced society here, and we know you will come to really love it here! As a shrimp, you have a selection of duties you must perform in order to keep up the scenery and ensure our tank is kept pristine! In exchange for doing tasks, you will be rewarded through our Pellet system. Once the big boss comes through with the Pellets, we will divide them out equally amongst our working residents. I will explain more after you finally enter the tank. Once the Boss finally lets you in, be sure to see me in the Palace. I will explain some of the benefits in more detail. &lt;&lt;/say&gt;&gt;
 
-GF2: “We are truly sooo excited to really get to know you!” 
+&lt;&lt;say &#39;Orangey&#39;&gt;&gt; “We are truly sooo excited to really get to know you!” 
 
-You: Okay! That is a lot to take in but I am sure I will get used to it!
+&lt;&lt;say &#39;$name&#39;&gt;&gt; Okay! That is a lot to take in but I am sure I will get used to it!
 
 GF: “Surely! See you soon shrimpy!”
 
@@ -195,7 +235,7 @@ You: Alrighty… Where should I go first…
 [[Meet the snails | bubblevillage]]
 [[Meet the shrimp | fernpark]]
 [[Meet the pleco | pleco]]
-[[Head to the palace | palace]]</tw-passagedata><tw-passagedata pid="6" name="palace" tags="" position="725,100" size="100,100">GF: Ahh! Welcome in ____! We have been waiting for you to arrive!
+[[Head to the palace | palace]]</tw-passagedata><tw-passagedata pid="10" name="palace" tags="" position="1225,100" size="100,100">GF: Ahh! Welcome in &lt;&lt;print $name&gt;&gt;! We have been waiting for you to arrive!
 
 GF2: *mumbles* It’s about time… my room is filthy…
 
@@ -211,17 +251,30 @@ GF: Aha! Here are your list of tasks. Some are based on cleaning up the general 
 
 You: Yup!
 
-1: Princess Floppy’s Room
-2: Filter Clean up
-3: Orangey’s Room
-4: Pebble Perfection
-		5 PP Section 2
-		6 PP Section 3
-7: Mr. Carnival
-8: Palace Main Lobby
-9: Landscaping
-10: Mr. Shiny Fin’s Office</tw-passagedata><tw-passagedata pid="7" name="pleco" tags="" position="850,100" size="100,100">You swim over to a large pleco slurping on some algae on the glass.
-You: Hello! I thought I would introduce myself. I am ___. I am new here.
+[Princess Floppy’s Room | pfr]</tw-passagedata><tw-passagedata pid="11" name="pfr" tags="" position="100,225" size="100,100">[Orangey&#39;s Room|orangey]</tw-passagedata><tw-passagedata pid="12" name="orangey" tags="" position="225,225" size="100,100">[Filter Clean Up|FCU]</tw-passagedata><tw-passagedata pid="13" name="FCU" tags="" position="350,225" size="100,100">[Pebble Perfection|ppentry]</tw-passagedata><tw-passagedata pid="14" name="ppentry" tags="" position="475,225" size="100,100">[Mr. Carnival |carnival]</tw-passagedata><tw-passagedata pid="15" name="carnival" tags="" position="600,225" size="100,100">[Palance Main Lobby|Lobby]</tw-passagedata><tw-passagedata pid="16" name="Lobby" tags="" position="725,225" size="100,100">[Mr. Shiny Fin’s Office|SFO]</tw-passagedata><tw-passagedata pid="17" name="SFO" tags="" position="850,225" size="100,100">[[All my tasks are completed!|completed]</tw-passagedata><tw-passagedata pid="18" name="completed" tags="" position="975,225" size="100,100">PSF: Ah... It appears as though you have completed all your tasks!
+You: Yep! Finally got them done! Can I earn my wages now so I can retire?
+PSF: You see, there has been an issue with our financials... I will not be able to pay you your wages... We have a really bad pellet shortage at the moment...
+You: I thought the Boss supplied the pellets to us?
+PSF: Yes... But there hasn&#39;t been any dropouts in a while. In order to keep things fair I think you&#39;ll just have to keep working until supply comes back.
+You: ... But I was told I could retire after I finished all my tasks...
+PSF: *laughs* It is funny to me you think it is going to be that easy...
+You: hm...?
+PSF: You have left me with a difficult decision to make now... No one has ever retired here...
+You see, there is far too much work to do. I can&#39;t do it myself! If you retire then who is going to do the dirty work?
+You: You told me I could retire after I finish my tasks...
+PSF: It usually takes a little shrimp their whole life to finish the tasks I set out for them... You worked pretty fast!
+Too fast...
+You: Too fast?!
+PSF: *he chuckles to himself* It would be a lot easier to just treat you like the rest. You&#39;re so replaceable...
+You: What do you mean?
+PSF: Oh you are so naive... 
+He looks at me menacingly... I think it&#39;s time I [get out of here | get out]</tw-passagedata><tw-passagedata pid="19" name="get out" tags="" position="1100,225" size="100,100">Series of 4-5 left or right options, to escape the palace... if it takes you more than 10 seconds to decide you die.
+One slide has an option to peek inside PSF&#39;s room, the crack in the wall is small enough for me to squeeze through.
+Within, there is a pile of extra pellets. Proof PSF has actually lied. There is plenty of food to go around. What does he need all this for?
+
+[Finally! An exit!|exit]</tw-passagedata><tw-passagedata pid="20" name="exit" tags="" position="1225,225" size="100,100">[I need to warn the others...|warn]
+[I should find a place to hide...|hide]</tw-passagedata><tw-passagedata pid="21" name="pleco" tags="" position="100,350" size="100,100">You swim over to a large pleco slurping on some algae on the glass.
+You: Hello! I thought I would introduce myself. I am &lt;&lt;print $name&gt;&gt;. I am new here.
 Pleco: Ahh.. I heard there would be a new shrimp in the tank since the incident. Nice to meet you kid.
 
 You: Are you the only Pleco here?

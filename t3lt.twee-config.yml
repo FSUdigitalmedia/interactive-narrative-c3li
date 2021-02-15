@@ -1,0 +1,11 @@
+sugarcube-2:
+  macros:
+    say:
+      name: say
+      container: true
+    character:
+      name: character
+    colors:
+      name: colors
+    animation:
+      name: animation

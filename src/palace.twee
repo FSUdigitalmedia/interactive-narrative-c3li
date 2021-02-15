@@ -31,3 +31,33 @@ You: Yup!
 [Mr. Shiny Fin’s Office|SFO]
 :: SFO
 
+[[All my tasks are completed!|completed]
+:: completed
+PSF: Ah... It appears as though you have completed all your tasks!
+You: Yep! Finally got them done! Can I earn my wages now so I can retire?
+PSF: You see, there has been an issue with our financials... I will not be able to pay you your wages... We have a really bad pellet shortage at the moment...
+You: I thought the Boss supplied the pellets to us?
+PSF: Yes... But there hasn't been any dropouts in a while. In order to keep things fair I think you'll just have to keep working until supply comes back.
+You: ... But I was told I could retire after I finished all my tasks...
+PSF: *laughs* It is funny to me you think it is going to be that easy...
+You: hm...?
+PSF: You have left me with a difficult decision to make now... No one has ever retired here...
+You see, there is far too much work to do. I can't do it myself! If you retire then who is going to do the dirty work?
+You: You told me I could retire after I finish my tasks...
+PSF: It usually takes a little shrimp their whole life to finish the tasks I set out for them... You worked pretty fast!
+Too fast...
+You: Too fast?!
+PSF: *he chuckles to himself* It would be a lot easier to just treat you like the rest. You're so replaceable...
+You: What do you mean?
+PSF: Oh you are so naive... 
+He looks at me menacingly... I think it's time I [get out of here | get out]
+:: get out
+Series of 4-5 left or right options, to escape the palace... if it takes you more than 10 seconds to decide you die.
+One slide has an option to peek inside PSF's room, the crack in the wall is small enough for me to squeeze through.
+Within, there is a pile of extra pellets. Proof PSF has actually lied. There is plenty of food to go around. What does he need all this for?
+
+[Finally! An exit!|exit]
+:: exit
+[I need to warn the others...|warn]
+[I should find a place to hide...|hide]
+

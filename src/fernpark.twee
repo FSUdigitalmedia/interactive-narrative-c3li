@@ -27,3 +27,15 @@ Shrimp1: Understandable kiddo! Be sure to get acquainted with some of the other 
 
 [Meet more shrimp|meetshrimp]
 :: meetshrimp
+
+
+:: warn
+Briskly, I swim towards Fern Park... I will let the shrimp know first...
+You: This is not a drill... PSF has plans to eat us if we want to retire early! He is out to get me right now as I speak!
+Shrebecca: Wait a minute! How can we trust you!
+You: I saw the food stash! He told me he couldn't pay me my wages, but it is because he is hoarding the food and threatening anyone who comes close to collecting their wages.
+Kevin: I believe him.
+Shrebecca: Well... He can try to stop all of us... One shrimp versus a fish like that can only do so much, but when we work together... We may have a chance at change.
+You: Let's do it!
+Shrebecca: Let's warn the snails as well!
+[Warn snails!|warnsnails]
