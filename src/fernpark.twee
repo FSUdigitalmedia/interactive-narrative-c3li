@@ -25,9 +25,9 @@ Shrimp1: Don’t mind him. His mind has probably gone hazy since the event. Anyw
 You: Thank you for being so welcoming. I should probably go see them soon now anyways…
 Shrimp1: Understandable kiddo! Be sure to get acquainted with some of the other tank mates too! Know you’re always welcome here in Fern Park. 
 
-[Meet more shrimp|meetshrimp]
+[[Meet more shrimp|meetshrimp]]
 :: meetshrimp
-
+you will have an option to meet 4 other shrimp, one is your new gf :)
 
 :: warn
 Briskly, I swim towards Fern Park... I will let the shrimp know first...
@@ -38,4 +38,4 @@ Kevin: I believe him.
 Shrebecca: Well... He can try to stop all of us... One shrimp versus a fish like that can only do so much, but when we work together... We may have a chance at change.
 You: Let's do it!
 Shrebecca: Let's warn the snails as well!
-[Warn snails!|warnsnails]
+[[Warn snails!|warnsnails]]
