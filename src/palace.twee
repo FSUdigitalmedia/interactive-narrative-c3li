@@ -49,11 +49,40 @@ You: What do you mean?
 PSF: Oh you are so naive... 
 He looks at me menacingly... I think it's time I [[get out of here | get out]]
 :: get out
-Series of 4-5 left or right options, to escape the palace... if it takes you more than 10 seconds to decide you die.
-One slide has an option to peek inside PSF's room, the crack in the wall is small enough for me to squeeze through.
-Within, there is a pile of extra pellets. Proof PSF has actually lied. There is plenty of food to go around. What does he need all this for?
+Quick! He is right behind you!
 
-[[Finally! An exit!|exit]]
+[[LEFT | left1]]
+:: left
+It is a deadend!
+[[Go back | right1]]
+[[RIGHT | right1]]
+:: right1
+[[LEFT | left2]]
+[[RIGHT | right2]]
+:: left2
+There is a door this way. It says 'Prince Quarters'. 
+There is a crack small enough for you to go through.
+You feel compelled to enter.
+[[Squeeze through the cracks. | psf room]]
+:: right2
+There is just a garbage can... How can you accumulate trash underwater...?
+[[Go back. | left 2]]
+
+:: psf room
+Within, there is a pile of extra pellets. Proof PSF has actually lied. 
+There is plenty of food to go around. What does he need all this for?
+
+There is another door in this room... Maybe it is an exit?
+[[Leave the room. | leavepsf]]
+:: leavepsf
+[[LEFT | left3]]
+[[RIGHT | right3]]
+:: left3
+You hear Orangey and Mr. Carnival coming... You need to go the other way... ASAP.
+[[Go back. | right3]]
+:: right3
+Whew... you see the light... It is an exit!
+[[Finally!|exit]]
 :: exit
 [[I need to warn the others...|warn]]
 [[I should find a place to hide...|hide]]

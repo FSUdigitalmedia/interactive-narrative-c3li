@@ -13,7 +13,7 @@ Bottom Dweller
 [[Continue|meters2]]
 
 :: Start
-<<say 'Lisa' 'assets/kevin.jpg'>>Hey there!<</say>>
+
 From as early as you can remember, you’ve been in Frankie’s Fish and Feed.  
 You have always been comfortable in your small tank because you were surrounded by some of my best shrimpy friends. 
 There are a few snails in your tank as well, but they don’t speak much, so you usually leave them be. 
@@ -62,5 +62,4 @@ You: Alrighty… Where should I go first…
 
 [[Meet the snails | bubblevillage]]
 [[Meet the shrimp | fernpark]]
-[[Meet the pleco | pleco]]
 [[Head to the palace | palace]]

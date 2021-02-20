@@ -206,8 +206,7 @@ Kevin: I believe him.
 Shrebecca: Well... He can try to stop all of us... One shrimp versus a fish like that can only do so much, but when we work together... We may have a chance at change.
 You: Let&#39;s do it!
 Shrebecca: Let&#39;s warn the snails as well!
-[[Warn snails!|warnsnails]]</tw-passagedata><tw-passagedata pid="7" name="StoryInit" tags="" position="850,100" size="100,100">[[Continue|meters2]]</tw-passagedata><tw-passagedata pid="8" name="Start" tags="" position="975,100" size="100,100">&lt;&lt;say &#39;Lisa&#39; &#39;assets/kevin.jpg&#39;&gt;&gt;Hey there!&lt;&lt;/say&gt;&gt;
-From as early as you can remember, you’ve been in Frankie’s Fish and Feed.  
+[[Warn snails!|warnsnails]]</tw-passagedata><tw-passagedata pid="7" name="StoryInit" tags="" position="850,100" size="100,100">[[Continue|meters2]]</tw-passagedata><tw-passagedata pid="8" name="Start" tags="" position="975,100" size="100,100">From as early as you can remember, you’ve been in Frankie’s Fish and Feed.  
 You have always been comfortable in your small tank because you were surrounded by some of my best shrimpy friends. 
 There are a few snails in your tank as well, but they don’t speak much, so you usually leave them be. 
 
@@ -252,7 +251,6 @@ You: Alrighty… Where should I go first…
 
 [[Meet the snails | bubblevillage]]
 [[Meet the shrimp | fernpark]]
-[[Meet the pleco | pleco]]
 [[Head to the palace | palace]]</tw-passagedata><tw-passagedata pid="10" name="palace" tags="" position="1225,100" size="100,100">GF: Ahh! Welcome in &lt;&lt;print $name&gt;&gt;! We have been waiting for you to arrive!
 
 GF2: *mumbles* It’s about time… my room is filthy…
@@ -287,15 +285,27 @@ You: Too fast?!
 PSF: *he chuckles to himself* It would be a lot easier to just treat you like the rest. You&#39;re so replaceable...
 You: What do you mean?
 PSF: Oh you are so naive... 
-He looks at me menacingly... I think it&#39;s time I [[get out of here | get out]]</tw-passagedata><tw-passagedata pid="16" name="get out" tags="" position="725,225" size="100,100">Series of 4-5 left or right options, to escape the palace... if it takes you more than 10 seconds to decide you die.
-One slide has an option to peek inside PSF&#39;s room, the crack in the wall is small enough for me to squeeze through.
-Within, there is a pile of extra pellets. Proof PSF has actually lied. There is plenty of food to go around. What does he need all this for?
+He looks at me menacingly... I think it&#39;s time I [[get out of here | get out]]</tw-passagedata><tw-passagedata pid="16" name="get out" tags="" position="725,225" size="100,100">Quick! He is right behind you!
 
-[[Finally! An exit!|exit]]</tw-passagedata><tw-passagedata pid="17" name="exit" tags="" position="850,225" size="100,100">[[I need to warn the others...|warn]]
-[[I should find a place to hide...|hide]]</tw-passagedata><tw-passagedata pid="18" name="hide" tags="" position="975,225" size="100,100">You swiftly exit the Palace out of the back entrance. There is a rock structure closeby.
+[[LEFT | left1]]</tw-passagedata><tw-passagedata pid="17" name="left" tags="" position="850,225" size="100,100">It is a deadend!
+[[Go back | right1]]
+[[RIGHT | right1]]</tw-passagedata><tw-passagedata pid="18" name="right1" tags="" position="975,225" size="100,100">[[LEFT | left2]]
+[[RIGHT | right2]]</tw-passagedata><tw-passagedata pid="19" name="left2" tags="" position="1100,225" size="100,100">There is a door this way. It says &#39;Prince Quarters&#39;. 
+There is a crack small enough for you to go through.
+You feel compelled to enter.
+[[Squeeze through the cracks. | psf room]]</tw-passagedata><tw-passagedata pid="20" name="right2" tags="" position="1225,225" size="100,100">There is just a garbage can... How can you accumulate trash underwater...?
+[[Go back. | left 2]]</tw-passagedata><tw-passagedata pid="21" name="psf room" tags="" position="100,350" size="100,100">Within, there is a pile of extra pellets. Proof PSF has actually lied. 
+There is plenty of food to go around. What does he need all this for?
+
+There is another door in this room... Maybe it is an exit?
+[[Leave the room. | leavepsf]]</tw-passagedata><tw-passagedata pid="22" name="leavepsf" tags="" position="225,350" size="100,100">[[LEFT | left3]]
+[[RIGHT | right3]]</tw-passagedata><tw-passagedata pid="23" name="left3" tags="" position="350,350" size="100,100">You hear Orangey and Mr. Carnival coming... You need to go the other way... ASAP.
+[[Go back. | right3]]</tw-passagedata><tw-passagedata pid="24" name="right3" tags="" position="475,350" size="100,100">Whew... you see the light... It is an exit!
+[[Finally!|exit]]</tw-passagedata><tw-passagedata pid="25" name="exit" tags="" position="600,350" size="100,100">[[I need to warn the others...|warn]]
+[[I should find a place to hide...|hide]]</tw-passagedata><tw-passagedata pid="26" name="hide" tags="" position="725,350" size="100,100">You swiftly exit the Palace out of the back entrance. There is a rock structure closeby.
 You squeeze in between two of the stones. Surely he can&#39;t see you here.
 
-[[&gt;&gt;&gt; |controck]]</tw-passagedata><tw-passagedata pid="19" name="controck" tags="" position="1100,225" size="100,100">You finally catch your breath for a moment. That is... until...
+[[&gt;&gt;&gt; |controck]]</tw-passagedata><tw-passagedata pid="27" name="controck" tags="" position="850,350" size="100,100">You finally catch your breath for a moment. That is... until...
 
 PSF: Hey! Shrimpy! You thought you could hide from me huh... It is honestly a little pathetic... 
 Right next to the exit? Really? Whatever... I am starving.
@@ -303,7 +313,7 @@ Right next to the exit? Really? Whatever... I am starving.
 And in an instant... Your short shrimp life flashes before your eyes.
 It is all over...
 
-[[What went wrong...?|Start]]</tw-passagedata><tw-passagedata pid="20" name="unite" tags="" position="1225,225" size="100,100">You, the shrimp colony, and the snails head up to the palace steps. The snails form a line in front of the shrimp.
+[[What went wrong...?|Start]]</tw-passagedata><tw-passagedata pid="28" name="unite" tags="" position="975,350" size="100,100">You, the shrimp colony, and the snails head up to the palace steps. The snails form a line in front of the shrimp.
 
 You: Come out Prince Shiny Fins! It is time to take accountability for your wrongdoing!
 PSF comes out of the palace doorway.
@@ -361,7 +371,7 @@ Until... they start saying their goodbyes to you...
 You drift away peacefully...
 Shrimp heaven is quite nice.
 
-You won the game.</tw-passagedata><tw-passagedata pid="21" name="pleco" tags="" position="100,350" size="100,100">You swim over to a large pleco slurping on some algae on the glass.
+You won the game.</tw-passagedata><tw-passagedata pid="29" name="pleco" tags="" position="1100,350" size="100,100">You swim over to a large pleco slurping on some algae on the glass.
 You: Hello! I thought I would introduce myself. I am &lt;&lt;print $name&gt;&gt;. I am new here.
 Pleco: Ahh.. I heard there would be a new shrimp in the tank since the incident. Nice to meet you kid.
 
