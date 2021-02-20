@@ -5,49 +5,49 @@ Snail1: Whatever, whatever! The Goldies let us know! Please just leave us alone 
 
 You: I-
 
-Snail2: I am so sorry about her. Her mouth moves a lot quicker than she does. Welcome to Bubble Village! We are so excited to meet you!
+Snamy: I am so sorry about her. Her mouth moves a lot quicker than she does. Welcome to Bubble Village! We are so excited to meet you!
 
-Snail1: Pleaseee… Shelly! We have to get this baby shower in order! We don’t have time to talk to newcomers right now!
+Shelly: Pleaseee… Snamy! We have to get this baby shower in order! We don’t have time to talk to newcomers right now!
 
-Snail2: Quiet Shelly! Sorry, she has been a mess trying to get our affairs in order before the new snabies come in!
+Snamy: Quiet Shelly! Sorry, she has been a mess trying to get our affairs in order before the new snabies come in!
 
 You: Snabies?
 
-Snail1: SNAIL BABIES!!!
+Shelly: SNAIL BABIES!!!
 
-Snail2: Yes… Snail babies. Ms. Fibonacci just laid a few clutches of eggs recently, so we are planning a baby shower! Unfortunately, since Mr. and Ms. Fibonacci retired, our village has gotten too dirty to celebrate anything just yet. Shelly has planned a baby shower, but there’s still so much cleaning up left to do.
+Snamy: Yes… Snail babies. Ms. Fibonacci just laid a few clutches of eggs recently, so we are planning a baby shower! Unfortunately, since Mr. and Ms. Fibonacci retired, our village has gotten too dirty to celebrate anything just yet. Shelly has planned a baby shower, but there’s still so much cleaning up left to do.
 
 You: I can help!
 
-Snail1: You can?! Oh whew! Now I can finally slow down a bit!
-Snail2: It isn’t like you were going very quickly to begin with… (laughs)
+Shelly: You can?! Oh whew! Now I can finally slow down a bit!
+Snamy: It isn’t like you were going very quickly to begin with… (laughs)
 
 You: Yeah, I really don’t mind. I have my work cut out for me anyways, so I may as well help out where I can.
 
-Snail2: Thank you so much!
+Snamy: Thank you so much!
 
 [[Help clean up for the baby shower. | babyshowerclean]]
 [[Meet the shrimp! |fernpark]]
-[[Meet the pleco! | pleco]]
+[Meet the pleco! | pleco]
 :: babyshowerclean
 Here there will be an open plane of gravel but it looks kind of messy/covered in algae, etc. You click on the colored gravel until it is all clean.
 When you are finished there will be a screen that says:
 
-Snail 1: Wow! I haven't seen Bubble Village sparkle like this since we moved in! Thank you so much <<print $name>>. Here is a token of my gratitude. I have been holding onto this for a while.
-[It's a green bean! | greenbean]
+Shelly: Wow! I haven't seen Bubble Village sparkle like this since we moved in! Thank you so much <<print $name>>. Here is a token of my gratitude. I have been holding onto this for a while.
+[[It's a green bean! | greenbean]]
 This will be added to your inventory, you can snack on this now or later.
 
-Snail 2: Be sure to come visit us again! We could always use a hand.
+Snamy: Be sure to come visit us again! We could always use a hand.
 
 :: warnsnails
-Snail 1: The whole shrimp colony... What the tank is going on?
+Shelly: The whole shrimp colony... What the tank is going on?
 You: We must act fast. The Goldfish have plans to eat anyone who wants to retire early. I just tried and he said he didn't have enough pellets to pay my retirement, but he is hoarding the stash of pellets! There is plenty to go around!
-Snail 2: I knew it! We haven't been paid nearly enough recently! He kept saying the Boss wasn't dropping enough to feed us!
+Snamy: I knew it! We haven't been paid nearly enough recently! He kept saying the Boss wasn't dropping enough to feed us!
 You: It's not true! 
-Snail 1: We must band together against this evil. This isn't fair.
-Snail 2: We are putting our lives at sake...
-Snail 1: We weren't really living before this... Let's do it.
+Shelly: We must band together against this evil. This isn't fair.
+Snamy: We are putting our lives at sake...
+Shelly: We weren't really living before this... Let's do it.
 
 You: Thank you snails... Let's go to the palace!
-Pleco: I know you aren't forgetting me... Right?
 
+[[Unite and confront the goldfish.|unite]]

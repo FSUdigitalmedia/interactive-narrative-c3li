@@ -15,23 +15,20 @@ You: *laughs nervously*
 GF: Aha! Here are your list of tasks. Some are based on cleaning up the general tank area, and others are based on cleaning the various rooms in the Goldfish Palace. Just report back when you are done, and we will grant you your Pellets. If you are doing a superb job, sometimes we will treat you with an extra Bonus. Sound good?
 
 You: Yup!
+[[completed]]
 
-[Princess Floppy’s Room | pfr]
-:: pfr
-[Orangey's Room|orangey]
+[[Orangey's Room|orangey]]
 :: orangey
-[Filter Clean Up|FCU]
-:: FCU
-[Pebble Perfection|ppentry]
+
+[[Pebble Perfection|ppentry]]
 :: ppentry
-[Mr. Carnival |carnival]
+[[Mr. Carnival |carnival]]
 :: carnival
-[Palance Main Lobby|Lobby]
-:: Lobby
-[Mr. Shiny Fin’s Office|SFO]
+
+[[Mr. Shiny Fin’s Office|SFO]]
 :: SFO
 
-[[All my tasks are completed!|completed]
+[[All my tasks are completed!|completed]]
 :: completed
 PSF: Ah... It appears as though you have completed all your tasks!
 You: Yep! Finally got them done! Can I earn my wages now so I can retire?
@@ -50,14 +47,91 @@ You: Too fast?!
 PSF: *he chuckles to himself* It would be a lot easier to just treat you like the rest. You're so replaceable...
 You: What do you mean?
 PSF: Oh you are so naive... 
-He looks at me menacingly... I think it's time I [get out of here | get out]
+He looks at me menacingly... I think it's time I [[get out of here | get out]]
 :: get out
 Series of 4-5 left or right options, to escape the palace... if it takes you more than 10 seconds to decide you die.
 One slide has an option to peek inside PSF's room, the crack in the wall is small enough for me to squeeze through.
 Within, there is a pile of extra pellets. Proof PSF has actually lied. There is plenty of food to go around. What does he need all this for?
 
-[Finally! An exit!|exit]
+[[Finally! An exit!|exit]]
 :: exit
-[I need to warn the others...|warn]
-[I should find a place to hide...|hide]
+[[I need to warn the others...|warn]]
+[[I should find a place to hide...|hide]]
 
+:: hide
+You swiftly exit the Palace out of the back entrance. There is a rock structure closeby.
+You squeeze in between two of the stones. Surely he can't see you here.
+
+[[>>> |controck]]
+:: controck
+You finally catch your breath for a moment. That is... until...
+
+PSF: Hey! Shrimpy! You thought you could hide from me huh... It is honestly a little pathetic... 
+Right next to the exit? Really? Whatever... I am starving.
+
+And in an instant... Your short shrimp life flashes before your eyes.
+It is all over...
+
+[[What went wrong...?|Start]]
+
+
+:: unite
+You, the shrimp colony, and the snails head up to the palace steps. The snails form a line in front of the shrimp.
+
+You: Come out Prince Shiny Fins! It is time to take accountability for your wrongdoing!
+PSF comes out of the palace doorway.
+PSF: Me...? I am sorry... What exactly have I done wrong? I have done nothing but good for this tank!
+You: More like no good! The shrimp colony is starving due to your greediness. 
+I know about your food stash. Why keep it so secret?
+PSF: *He begins to appear more nervous...* Pellet stash? What are you talking about...?
+You: You can't play dumb anymore Prince, the whole tank knows your dirty secret. What are you going to do? Eat us?
+PSF: Why... It is starting to look like a good idea...
+You: Wouldn't it just be easier to come clean and redistribute your food stash as it should have been?
+PSF: You think I am going to take orders from a shrimp?! Hilarious!
+
+Suddenly... Orangey and Mr. Carnival appear from behind the palace...
+
+Orangey: So what's this about your food stash Prince...? You told us the Boss stopped sending out enough rations for everybody...
+Mr. Carnival: Yeah... You're telling me you have just been hoarding it all? What a rotten scumbag...
+
+PSF: How dare you speak of me like that! I am your Prince!
+Orangey: Not too good of one... A good prince wouldn't hoard food from his tankmates... 
+
+Orangey and Mr. Carnival join the line with the snails and shrimp.
+
+You: So you could probably eat me... But can you really stop all of us?
+
+PSF: ... I... I.... *starts crying*...
+
+You: Are you really crying right now?
+
+PSF: I have been so evil... I have treated you all so poorly and exploited your bodies for labor so that MY life could be easier.
+But at the end of the day, no matter how rich I am, I will always be a greedy scumbag...
+
+You: Well I am not disagree with that.
+
+PSF: Okay... I am formally apologizing. I will redistribute the stash immediately.
+I am sorry for not seeing the error in my ways. I hope you all can find the space in your heart to forgive me.
+
+Orangey: They may be able to forgive you, but I don't think that I will.  How can we trust having you in power again?
+Mr. Carnival: I don't think we can... There must be another option.
+
+Shelly: If anyone has had the power to truly unite this tank... I would say it is <<print $name>>. Maybe they should be our leader.
+Snamy: I don't think that is a bad idea... Shrimp... Goldies... Do you agree?
+
+The goldfish and shrimp colony all mumble in satisfaction.
+PSF: Okay... <<print $name>>, I relinquish my crown to you. Thank you.
+
+
+The next few months went smoothly. As time passed, the tankmates found that the Boss was always destributing just enough rations for everyone.
+Everyone had a part in keeping the tank clean and safe.
+About a year has passed since your first days in the tank.
+You are constantly thankful that you no longer have to work to survive. You just work to do your part for the tank.
+Out of the blue, your tankmates start to fall ill... An infection has overwhelmed the tank.
+One by one, you have to say goodbye to your loved ones.
+Until... they start saying their goodbyes to you...
+
+You drift away peacefully...
+Shrimp heaven is quite nice.
+
+You won the game.

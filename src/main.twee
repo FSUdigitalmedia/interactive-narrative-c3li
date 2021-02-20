@@ -10,37 +10,36 @@ Bottom Dweller
 
 :: StoryInit
 
-
 [[Continue|meters2]]
 
 :: Start
+<<say 'Lisa' 'assets/kevin.jpg'>>Hey there!<</say>>
+From as early as you can remember, you’ve been in Frankie’s Fish and Feed.  
+You have always been comfortable in your small tank because you were surrounded by some of my best shrimpy friends. 
+There are a few snails in your tank as well, but they don’t speak much, so you usually leave them be. 
 
-From as early as I can remember I’ve been in Frankie’s Fish and Feed.  
-I have always been comfortable in my small tank because I was surrounded by some of my best shrimpy friends. 
-There are a few snails in my tank as well, but they don’t speak much, so I usually leave them be. 
-
-Today started out just like any other day,  until a net splashed into my tank. 
-I attempted to swim away, but it scooped me up. 
-I was placed in a plastic bag with some of my tank water. 
-I didn’t even get to say goodbye to my friends…
+Today started out just like any other day,  until a net splashed into your tank. 
+You attempted to swim away, but it scooped you up. 
+You are placed in a plastic bag with some of your tank water. 
+You didn’t even get to say goodbye to your friends…
 
 The next few moments are a blur. 
-I can only see the reflective plastic. 
-I am shuffled around a bit, and suddenly, my bag is placed in an area with familiar walls. 
-It is another tank, but it isn’t my home.
+You can only see the reflective plastic. 
+You are shuffled around a bit, and suddenly, your bag is placed in an area with familiar walls. 
+It is another tank, but it isn’t your home.
 
-As I peer through the plastic, I can't help but to notice a beautiful, bustling tank. 
+As you peer through the plastic, you can't help but to notice a beautiful, bustling tank. 
 There are many snails, fish, and even other shrimp. 
-I finally relax a bit. You realize quickly this will be your new home. 
-I try to get comfortable as the water temperature changes slowly…
+You finally relax a bit. You realize quickly this will be your new home. 
+You try to get comfortable as the water temperature changes slowly…
 
 *tap tap tap*
-I suddenly awaken to 5 goldfish staring at me from outside the plastic.
-GF: “Welcome newcomer! Quite interesting, you are alone. Usually the shrimpies come with some friends…”
+You suddenly awaken to 3 goldfish staring at you from outside the plastic.
+PSF: “Welcome newcomer! Quite interesting, you are alone. Usually the shrimpies come with some friends…”
 
-Another goldfish murmurs, “At least we have a replacement… Since the incident…”
+Orangey: “At least we have a replacement… Since the incident…”
 
-GF: “Let’s not delve into that right now! We don’t want to scare him! I am sorry kiddo…. How rude of me I didn’t even ask for your name!”
+SPF: “Let’s not delve into that right now! We don’t want to scare him! I am sorry kiddo…. How rude of me I didn’t even ask for your name!”
 <<textbox "$name" "" "continue1">>
 
 :: continue1
