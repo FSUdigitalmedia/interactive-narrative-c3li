@@ -105,17 +105,19 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 .say{border:1px solid #eee;overflow:auto}.say img{max-width:20%;float:left;margin-right:1em}.say p:first-of-type{font-weight:700;margin:.2em 0;border-bottom:1px solid #eee}.say p:last-of-type{padding:.5em;margin:0}
 /* twine-user-stylesheet #2: "style.css" */
 body {
-    background-color: #20aec8;
+    background-color: #5fc7da;
+    font-family: monospace;
+    font-size: 15px;
+    color: rgb(3, 71, 110);
+    text-align: center
   }
   
   h1 {
-    color: white;
-    text-align: center;
+    ;
   }
   
   p {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
+    
   }
   </style><script role="script" id="twine-user-script" type="text/twine-javascript">/* twine-user-script #1: "meters.min.js" */
 // meters.min.js, for SugarCube 2, by Chapel
@@ -198,6 +200,7 @@ Shrebecca: Well... He can try to stop all of us... One shrimp versus a fish like
 [[Let&#39;s do it! | ws3]]</tw-passagedata><tw-passagedata pid="19" name="ws3" tags="" position="1100,225" size="100,100">Shrebecca: Let&#39;s warn the snails as well!
 [[Warn snails!|warnsnails]]</tw-passagedata><tw-passagedata pid="20" name="StoryInit" tags="" position="1225,225" size="100,100">&lt;&lt;set $algaecleaned to 0&gt;&gt;
 &lt;&lt;set $greenbean to 0&gt;&gt;
+&lt;&lt;set $neededbeans to 3&gt;&gt;
 [[Continue|meters2]]</tw-passagedata><tw-passagedata pid="21" name="Start" tags="" position="100,350" size="100,100">From as early as you can remember, you’ve been in Frankie’s Fish and Feed.  
 You have always been comfortable in your small tank because you were surrounded by some of my best shrimpy friends. 
 There are a few snails in your tank as well, but they don’t speak much, so you usually leave them be. 
@@ -215,7 +218,7 @@ There are many snails, fish, and even other shrimp.
 You finally relax a bit. You realize quickly this will be your new home. 
 You try to get comfortable as the water temperature changes slowly…
 
-[[Time to catch some Zs... | intro4]]</tw-passagedata><tw-passagedata pid="25" name="intro4" tags="" position="600,350" size="100,100">*tap tap tap*
+[[Time to catch some Zs... | intro4]]</tw-passagedata><tw-passagedata pid="25" name="intro4" tags="" position="600,350" size="100,100">-tap tap tap-
 
 You suddenly awaken to 3 goldfish staring at you from outside the plastic.
 Prince Shiny Fins: Welcome newcomer! Quite interesting, you are alone. Usually the shrimpies come with some friends…
@@ -265,7 +268,7 @@ Orangey: Nice! You&#39;re here! Sorry for the mess... Have fun cleaning it! *chu
 Orangey: Wow! That was fast! You are just too good at this!
 
 [[That is what I just said... |anyways]]</tw-passagedata><tw-passagedata pid="35" name="anyways" tags="" position="600,475" size="100,100">Orangey: Oh... Anyways... Do you want this greenbean?
-[[Sure! | yesgreenbean]]</tw-passagedata><tw-passagedata pid="36" name="yesgreenbean" tags="" position="725,475" size="100,100">&lt;&lt;set $greenbean to +=1&gt;&gt;
+[[Sure! | yesgreenbean]]</tw-passagedata><tw-passagedata pid="36" name="yesgreenbean" tags="" position="725,475" size="100,100">&lt;&lt;set $greenbean +=1&gt;&gt;
 Nice...
 What next...
 [[Do another task. | tasklist]]</tw-passagedata><tw-passagedata pid="37" name="ppentry" tags="" position="850,475" size="100,100">Prince Shiny Fins leads you to the front of the tank.
@@ -273,62 +276,70 @@ What next...
 Prince Shiny Fins: This is what everyone looking in will see first.
 Can you clean this up?
 [[Clean up the front of the tank. |ppclean]]</tw-passagedata><tw-passagedata pid="38" name="ppclean" tags="" position="975,475" size="100,100">Wow,that was fast.
-[[Honestly I am too fast for my own good. | ppdone]]
-Prince Shiny Fins rushes besides you.
+[[Honestly I am too fast for my own good. | ppdone]]</tw-passagedata><tw-passagedata pid="39" name="ppdone" tags="" position="1100,475" size="100,100">Prince Shiny Fins rushes besides you.
 That was speedy... Fantastic!
 Here is a greenbean to mark your progress.
-[[Sweet! Bean...! | greenbean2]]</tw-passagedata><tw-passagedata pid="39" name="greenbean2" tags="" position="1100,475" size="100,100">&lt;&lt;set $greenbean to $greenbean+=1&gt;&gt;
+[[Sweet! Bean...! | greenbean2]]</tw-passagedata><tw-passagedata pid="40" name="greenbean2" tags="" position="1225,475" size="100,100">&lt;&lt;set $greenbean to $greenbean+=1&gt;&gt;
 What next?
-[[Another task?|tasklist]]</tw-passagedata><tw-passagedata pid="40" name="SFO" tags="" position="1225,475" size="100,100"></tw-passagedata><tw-passagedata pid="41" name="completed" tags="" position="100,600" size="100,100">Prince Shiny Fins: Ah... It appears as though you have completed all your tasks!
-[[ Yep! Finally got them done! Can I earn my wages now so I can retire? |retire1]]</tw-passagedata><tw-passagedata pid="42" name="retire 1" tags="" position="225,600" size="100,100">Prince Shiny Fins: You see, there has been an issue with our financials... I will not be able to pay you your wages... We have a really bad pellet shortage at the moment...
-[[I thought the Boss supplied the pellets to us?|retire2]]</tw-passagedata><tw-passagedata pid="43" name="retire2" tags="" position="350,600" size="100,100">Prince Shiny Fins: Yes... But there hasn&#39;t been any dropouts in a while. In order to keep things fair I think you&#39;ll just have to keep working until supply comes back.
-[[... But I was told I could retire after I finished all my tasks...| retire 3]]</tw-passagedata><tw-passagedata pid="44" name="retire3" tags="" position="475,600" size="100,100">Prince Shiny Fins: *laughs* It is funny to me you think it is going to be that easy...
-[[ hm...? |retire4]]</tw-passagedata><tw-passagedata pid="45" name="retire4" tags="" position="600,600" size="100,100">Prince Shiny Fins: You have left me with a difficult decision to make now... No one has ever retired here...
-You see, there is far too much work to do. I can&#39;t do it myself! If you retire then who is going to do the dirty work?
-[[ You told me I could retire after I finish my tasks...| retire5]]</tw-passagedata><tw-passagedata pid="46" name="retire5" tags="" position="725,600" size="100,100">Prince Shiny Fins: It usually takes a little shrimp their whole life to finish the tasks I set out for them... You worked pretty fast!
-Too fast...
-[[ Too fast?!| retire6]]</tw-passagedata><tw-passagedata pid="47" name="retire6" tags="" position="850,600" size="100,100">Prince Shiny Fins: *chuckles* It would be a lot easier to just treat you like the rest. You&#39;re so replaceable...
-[[What do you mean? |retire7]]</tw-passagedata><tw-passagedata pid="48" name="retire 7" tags="" position="975,600" size="100,100">Prince Shiny Fins: Oh you are so naive... 
-He looks at me menacingly... I think it&#39;s time I [[get out of here | get out]]</tw-passagedata><tw-passagedata pid="49" name="get out" tags="" position="1100,600" size="100,100">Quick! He is right behind you!
+[[Another task?|tasklist]]</tw-passagedata><tw-passagedata pid="41" name="SFO" tags="" position="100,600" size="100,100">Inside the palace, there is a room with the words &quot;Prince Shiny Fins Office&quot;.
+You take a peek inside.
 
-[[LEFT | left1]]</tw-passagedata><tw-passagedata pid="50" name="left" tags="" position="1225,600" size="100,100">It is a deadend!
-[[Go back | right1]]
-[[RIGHT | right1]]</tw-passagedata><tw-passagedata pid="51" name="right1" tags="" position="100,725" size="100,100">[[LEFT | left2]]
-[[RIGHT | right2]]</tw-passagedata><tw-passagedata pid="52" name="left2" tags="" position="225,725" size="100,100">There is a door this way. It says &#39;Prince Quarters&#39;. 
+Prince Shiny Fins: Ah nice! Welcome to my office. I haven&#39;t cleaned up in ages and my whole room is covered in algae.
+Can you get started on that?
+[[No problem!|cleansfo]]</tw-passagedata><tw-passagedata pid="42" name="cleansfo" tags="" position="225,600" size="100,100">Looks like there is some algae over [[here|algh]]</tw-passagedata><tw-passagedata pid="43" name="algh" tags="" position="350,600" size="100,100">Nice... All clean!
+
+Prince Shiny Fins: You have magnificent speed... I have never seen anything like this before.
+Here is another greenbean.
+[[Sweet! That was easy! |easybean]]</tw-passagedata><tw-passagedata pid="44" name="easybean" tags="" position="475,600" size="100,100">&lt;&lt;set $greenbean +=1&gt;&gt;
+What now...?
+&lt;&lt;if $greenbean &lt;= $neededbeans&gt;&gt;
+[[Another task! | tasklist]] &lt;&lt;/if&gt;&gt;
+ &lt;&lt;if $greenbean &gt;= $neededbeans&gt;&gt;
+ [[I am all done! | completed]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="completed" tags="" position="600,600" size="100,100">Prince Shiny Fins: Ah... It appears as though you have completed all your tasks!
+[[ Yep! Finally got them done! Can I earn my wages now so I can retire? |retire1]]</tw-passagedata><tw-passagedata pid="46" name="retire1" tags="" position="725,600" size="100,100">Prince Shiny Fins: You see, there has been an issue with our financials... I will not be able to pay you your wages... We have a really bad pellet shortage at the moment...
+[[I thought the Boss supplied the pellets to us?|retire2]]</tw-passagedata><tw-passagedata pid="47" name="retire2" tags="" position="850,600" size="100,100">Prince Shiny Fins: Yes... But there hasn&#39;t been any dropouts in a while. In order to keep things fair I think you&#39;ll just have to keep working until supply comes back.
+[[... But I was told I could retire after I finished all my tasks...| retire3]]</tw-passagedata><tw-passagedata pid="48" name="retire3" tags="" position="975,600" size="100,100">Prince Shiny Fins: *laughs* It is funny to me you think it is going to be that easy...
+[[ hm...? |retire4]]</tw-passagedata><tw-passagedata pid="49" name="retire4" tags="" position="1100,600" size="100,100">Prince Shiny Fins: You have left me with a difficult decision to make now... No one has ever retired here...
+You see, there is far too much work to do. I can&#39;t do it myself! If you retire then who is going to do the dirty work?
+[[ You told me I could retire after I finish my tasks...| retire5]]</tw-passagedata><tw-passagedata pid="50" name="retire5" tags="" position="1225,600" size="100,100">Prince Shiny Fins: It usually takes a little shrimp their whole life to finish the tasks I set out for them... You worked pretty fast!
+Too fast...
+[[ Too fast?!| retire6]]</tw-passagedata><tw-passagedata pid="51" name="retire6" tags="" position="100,725" size="100,100">Prince Shiny Fins: *chuckles* It would be a lot easier to just treat you like the rest. You&#39;re so replaceable...
+[[What do you mean? |retire7]]</tw-passagedata><tw-passagedata pid="52" name="retire7" tags="" position="225,725" size="100,100">Prince Shiny Fins: Oh you are so naive... 
+He looks at me menacingly... I think it&#39;s time I [[get out of here | get out]]</tw-passagedata><tw-passagedata pid="53" name="get out" tags="" position="350,725" size="100,100">Quick! He is right behind you!
+
+[[LEFT | left1]]
+[[RIGHT | right1]]</tw-passagedata><tw-passagedata pid="54" name="left1" tags="" position="475,725" size="100,100">It is a deadend!
+[[Go back | right1]]</tw-passagedata><tw-passagedata pid="55" name="right1" tags="" position="600,725" size="100,100">[[LEFT | left2]]
+[[RIGHT | right2]]</tw-passagedata><tw-passagedata pid="56" name="left2" tags="" position="725,725" size="100,100">There is a door this way. It says &#39;Prince Quarters&#39;. 
 There is a crack small enough for you to go through.
 You feel compelled to enter.
-[[Squeeze through the cracks. | psf room]]</tw-passagedata><tw-passagedata pid="53" name="right2" tags="" position="350,725" size="100,100">There is just a garbage can... How can you accumulate trash underwater...?
-[[Go back. | left 2]]</tw-passagedata><tw-passagedata pid="54" name="psf room" tags="" position="475,725" size="100,100">Within, there is a pile of extra pellets. Proof PSF has actually lied. 
+[[Squeeze through the cracks. | psf room]]</tw-passagedata><tw-passagedata pid="57" name="right2" tags="" position="850,725" size="100,100">There is just a garbage can... How can you accumulate trash underwater...?
+[[Go back. | left2]]</tw-passagedata><tw-passagedata pid="58" name="psf room" tags="" position="975,725" size="100,100">Within, there is a pile of extra pellets. Proof the prince has actually lied. 
 There is plenty of food to go around. What does he need all this for?
 
 There is another door in this room... Maybe it is an exit?
-[[Leave the room. | leavepsf]]</tw-passagedata><tw-passagedata pid="55" name="leavepsf" tags="" position="600,725" size="100,100">[[LEFT | left3]]
-[[RIGHT | right3]]</tw-passagedata><tw-passagedata pid="56" name="left3" tags="" position="725,725" size="100,100">You hear Orangey and Mr. Carnival coming... You need to go the other way... ASAP.
-[[Go back. | right3]]</tw-passagedata><tw-passagedata pid="57" name="right3" tags="" position="850,725" size="100,100">Whew... you see the light... It is an exit!
-[[Finally!|exit]]</tw-passagedata><tw-passagedata pid="58" name="exit" tags="" position="975,725" size="100,100">[[I need to warn the others...|warn]]
-[[I should find a place to hide...|hide]]</tw-passagedata><tw-passagedata pid="59" name="hide" tags="" position="1100,725" size="100,100">You swiftly exit the Palace out of the back entrance. There is a rock structure closeby.
+[[Leave the room. | leavepsf]]</tw-passagedata><tw-passagedata pid="59" name="leavepsf" tags="" position="1100,725" size="100,100">[[LEFT | left3]]
+[[RIGHT | right3]]</tw-passagedata><tw-passagedata pid="60" name="left3" tags="" position="1225,725" size="100,100">You hear Orangey and Mr. Carnival coming... You need to go the other way... ASAP.
+[[Go back. | right3]]</tw-passagedata><tw-passagedata pid="61" name="right3" tags="" position="100,850" size="100,100">Whew... you see the light... It is an exit!
+[[Finally!|exit]]</tw-passagedata><tw-passagedata pid="62" name="exit" tags="" position="225,850" size="100,100">[[I need to warn the others...|warn]]
+[[I should find a place to hide...|hide]]</tw-passagedata><tw-passagedata pid="63" name="hide" tags="" position="350,850" size="100,100">You swiftly exit the Palace out of the back entrance. There is a rock structure closeby.
 You squeeze in between two of the stones. Surely he can&#39;t see you here.
 
-[[&gt;&gt;&gt; |controck]]</tw-passagedata><tw-passagedata pid="60" name="controck" tags="" position="1225,725" size="100,100">You finally catch your breath for a moment. That is... until...
+[[&gt;&gt;&gt; |controck]]</tw-passagedata><tw-passagedata pid="64" name="controck" tags="" position="475,850" size="100,100">You finally catch your breath for a moment. That is... until...
 
-PSF: Hey! Shrimpy! You thought you could hide from me huh... It is honestly a little pathetic... 
+Prince Shiny Fins: Hey! Shrimpy! You thought you could hide from me huh... It is honestly a little pathetic... 
 Right next to the exit? Really? Whatever... I am starving.
 
 And in an instant... Your short shrimp life flashes before your eyes.
 It is all over...
 
-[[What went wrong...?|Start]]</tw-passagedata><tw-passagedata pid="61" name="unite" tags="" position="100,850" size="100,100">You, the shrimp colony, and the snails head up to the palace steps. The snails form a line in front of the shrimp.
-
-You: Come out Prince Shiny Fins! It is time to take accountability for your wrongdoing!
-PSF comes out of the palace doorway.
-PSF: Me...? I am sorry... What exactly have I done wrong? I have done nothing but good for this tank!
-You: More like no good! The shrimp colony is starving due to your greediness. 
-I know about your food stash. Why keep it so secret?
-PSF: *He begins to appear more nervous...* Pellet stash? What are you talking about...?
-You: You can&#39;t play dumb anymore Prince, the whole tank knows your dirty secret. What are you going to do? Eat us?
-PSF: Why... It is starting to look like a good idea...
-You: Wouldn&#39;t it just be easier to come clean and redistribute your food stash as it should have been?
-PSF: You think I am going to take orders from a shrimp?! Hilarious!
+[[What went wrong...?|Start]]</tw-passagedata><tw-passagedata pid="65" name="unite" tags="" position="600,850" size="100,100">You, the shrimp colony, and the snails head up to the palace steps. The snails form a line in front of the shrimp.
+[[Come out Prince Shiny Fins! It is time to take accountability for your wrongdoing!|un1]]</tw-passagedata><tw-passagedata pid="66" name="un1" tags="" position="725,850" size="100,100">Prince Shiny Fins comes out of the palace doorway.
+Prince Shiny Fins: Me...? I am sorry... What exactly have I done wrong? I have done nothing but good for this tank!
+[[More like no good! The shrimp colony is starving due to your greediness.  I know about your food stash. Why keep it so secret? | un2]]</tw-passagedata><tw-passagedata pid="67" name="un2" tags="" position="850,850" size="100,100">Suddenly, he looks a bit more nervous.
+Prince Shiny Fins: Pellet stash? What are you talking about...?
+[[You can&#39;t play dumb anymore Prince, the whole tank knows your dirty secret. What are you going to do? Eat us? | un3]]</tw-passagedata><tw-passagedata pid="68" name="un3" tags="" position="975,850" size="100,100">Prince Shiny Fins: Why... It is starting to look like a good idea...
+[[Wouldn&#39;t it just be easier to come clean and redistribute your food stash as it should have been? | un4]]</tw-passagedata><tw-passagedata pid="69" name="un4" tags="" position="1100,850" size="100,100">Prince Shiny Fins: You think I am going to take orders from a shrimp?! Hilarious!
 
 Suddenly... Orangey and Mr. Carnival appear from behind the palace...
 
@@ -340,18 +351,12 @@ Orangey: Not too good of one... A good prince wouldn&#39;t hoard food from his t
 
 Orangey and Mr. Carnival join the line with the snails and shrimp.
 
-You: So you could probably eat me... But can you really stop all of us?
+[[So you could probably eat me... But can you really stop all of us? | un5]]</tw-passagedata><tw-passagedata pid="70" name="un5" tags="" position="1225,850" size="100,100">Prince Shiny Fins: ... I... I.... *starts crying*...
 
-PSF: ... I... I.... *starts crying*...
-
-You: Are you really crying right now?
-
-PSF: I have been so evil... I have treated you all so poorly and exploited your bodies for labor so that MY life could be easier.
+[[Are you really crying right now?|un6]]</tw-passagedata><tw-passagedata pid="71" name="un6" tags="" position="100,975" size="100,100">Prince Shiny Fins: I have been so evil... I have treated you all so poorly and exploited your bodies for labor so that MY life could be easier.
 But at the end of the day, no matter how rich I am, I will always be a greedy scumbag...
 
-You: Well I am not disagree with that.
-
-PSF: Okay... I am formally apologizing. I will redistribute the stash immediately.
+[[Well I am not disagree with that... |un7]]</tw-passagedata><tw-passagedata pid="72" name="un7" tags="" position="225,975" size="100,100">Prince Shiny Fins: Okay... I am formally apologizing. I will redistribute the stash immediately.
 I am sorry for not seeing the error in my ways. I hope you all can find the space in your heart to forgive me.
 
 Orangey: They may be able to forgive you, but I don&#39;t think that I will.  How can we trust having you in power again?
@@ -361,10 +366,13 @@ Shelly: If anyone has had the power to truly unite this tank... I would say it i
 Snamy: I don&#39;t think that is a bad idea... Shrimp... Goldies... Do you agree?
 
 The goldfish and shrimp colony all mumble in satisfaction.
-PSF: Okay... &lt;&lt;print $name&gt;&gt;, I relinquish my crown to you. Thank you.
+Prince Shiny Fins: Okay... &lt;&lt;print $name&gt;&gt;, I relinquish my crown to you. Thank you.
 
+[[Return crown, but accept leadership. |leadership]]</tw-passagedata><tw-passagedata pid="73" name="leadership" tags="" position="350,975" size="100,100">You take the crown in your hands, and realize it is not right to wear this symbol of power.
+[[Prince Shiny Fins, I do not want this crown. It implies I rule this tank. The tank should be ruled by the tankmates. If you need someone to help lead, I will accept that offer. Prince, you can hold onto this crown. | returncrown]]</tw-passagedata><tw-passagedata pid="74" name="returncrown" tags="" position="475,975" size="100,100">The tankmates cheer you on as you mark your first step as a designated leader.
+Finally... you will have a chance to rest.
 
-The next few months went smoothly. As time passed, the tankmates found that the Boss was always destributing just enough rations for everyone.
+[[&gt;&gt;&gt;| storycont]]</tw-passagedata><tw-passagedata pid="75" name="storycont" tags="" position="600,975" size="100,100">The next few months went smoothly. As time passed, the tankmates found that the Boss was always destributing just enough rations for everyone.
 Everyone had a part in keeping the tank clean and safe.
 About a year has passed since your first days in the tank.
 You are constantly thankful that you no longer have to work to survive. You just work to do your part for the tank.
@@ -375,7 +383,7 @@ Until... they start saying their goodbyes to you...
 You drift away peacefully...
 Shrimp heaven is quite nice.
 
-You won the game.</tw-passagedata><tw-passagedata pid="62" name="pleco" tags="" position="225,850" size="100,100">You swim over to a large pleco slurping on some algae on the glass.
+You won the game.</tw-passagedata><tw-passagedata pid="76" name="pleco" tags="" position="725,975" size="100,100">You swim over to a large pleco slurping on some algae on the glass.
 You: Hello! I thought I would introduce myself. I am &lt;&lt;print $name&gt;&gt;. I am new here.
 Pleco: Ahh.. I heard there would be a new shrimp in the tank since the incident. Nice to meet you kid.
 

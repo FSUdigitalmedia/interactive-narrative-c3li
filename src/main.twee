@@ -11,6 +11,7 @@ Bottom Dweller
 :: StoryInit
 <<set $algaecleaned to 0>>
 <<set $greenbean to 0>>
+<<set $neededbeans to 3>>
 [[Continue|meters2]]
 
 :: Start
@@ -40,7 +41,7 @@ You try to get comfortable as the water temperature changes slowly…
 
 [[Time to catch some Zs... | intro4]]
 :: intro4
-*tap tap tap*
+-tap tap tap-
 
 You suddenly awaken to 3 goldfish staring at you from outside the plastic.
 Prince Shiny Fins: Welcome newcomer! Quite interesting, you are alone. Usually the shrimpies come with some friends…

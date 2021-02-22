@@ -1,14 +1,16 @@
 body {
-    background-color: #20aec8;
+    background-color: #5fc7da;
+    font-family: monospace;
+    font-size: 15px;
+    color: rgb(3, 71, 110);
+    text-align: center
   }
   
   h1 {
-    color: white;
-    text-align: center;
+    ;
   }
   
   p {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
+    
   }
   

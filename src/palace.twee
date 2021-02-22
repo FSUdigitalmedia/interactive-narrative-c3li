@@ -42,7 +42,7 @@ Orangey: Wow! That was fast! You are just too good at this!
 Orangey: Oh... Anyways... Do you want this greenbean?
 [[Sure! | yesgreenbean]]
 :: yesgreenbean
-<<set $greenbean to +=1>>
+<<set $greenbean +=1>>
 Nice...
 What next...
 [[Do another task. | tasklist]]
@@ -57,6 +57,7 @@ Can you clean this up?
 :: ppclean
 Wow,that was fast.
 [[Honestly I am too fast for my own good. | ppdone]]
+:: ppdone
 Prince Shiny Fins rushes besides you.
 That was speedy... Fantastic!
 Here is a greenbean to mark your progress.
@@ -66,17 +67,39 @@ Here is a greenbean to mark your progress.
 What next?
 [[Another task?|tasklist]]
 :: SFO
+Inside the palace, there is a room with the words "Prince Shiny Fins Office".
+You take a peek inside.
 
+Prince Shiny Fins: Ah nice! Welcome to my office. I haven't cleaned up in ages and my whole room is covered in algae.
+Can you get started on that?
+[[No problem!|cleansfo]]
+:: cleansfo
+Looks like there is some algae over [[here|algh]]
+:: algh
+And [[here|algh2]] as well...
+:: algh
+Nice... All clean!
+
+Prince Shiny Fins: You have magnificent speed... I have never seen anything like this before.
+Here is another greenbean.
+[[Sweet! That was easy! |easybean]]
+:: easybean
+<<set $greenbean +=1>>
+What now...?
+<<if $greenbean <= $neededbeans>>
+[[Another task! | tasklist]] <</if>>
+ <<if $greenbean >= $neededbeans>>
+ [[I am all done! | completed]]<</if>>
 
 :: completed
 Prince Shiny Fins: Ah... It appears as though you have completed all your tasks!
 [[ Yep! Finally got them done! Can I earn my wages now so I can retire? |retire1]]
-:: retire 1
+:: retire1
 Prince Shiny Fins: You see, there has been an issue with our financials... I will not be able to pay you your wages... We have a really bad pellet shortage at the moment...
 [[I thought the Boss supplied the pellets to us?|retire2]]
 :: retire2
 Prince Shiny Fins: Yes... But there hasn't been any dropouts in a while. In order to keep things fair I think you'll just have to keep working until supply comes back.
-[[... But I was told I could retire after I finished all my tasks...| retire 3]]
+[[... But I was told I could retire after I finished all my tasks...| retire3]]
 :: retire3
 Prince Shiny Fins: *laughs* It is funny to me you think it is going to be that easy...
 [[ hm...? |retire4]]
@@ -91,17 +114,18 @@ Too fast...
 :: retire6
 Prince Shiny Fins: *chuckles* It would be a lot easier to just treat you like the rest. You're so replaceable...
 [[What do you mean? |retire7]]
-:: retire 7
+:: retire7
 Prince Shiny Fins: Oh you are so naive... 
 He looks at me menacingly... I think it's time I [[get out of here | get out]]
 :: get out
 Quick! He is right behind you!
 
 [[LEFT | left1]]
-:: left
+[[RIGHT | right1]]
+:: left1
 It is a deadend!
 [[Go back | right1]]
-[[RIGHT | right1]]
+
 :: right1
 [[LEFT | left2]]
 [[RIGHT | right2]]
@@ -112,10 +136,10 @@ You feel compelled to enter.
 [[Squeeze through the cracks. | psf room]]
 :: right2
 There is just a garbage can... How can you accumulate trash underwater...?
-[[Go back. | left 2]]
+[[Go back. | left2]]
 
 :: psf room
-Within, there is a pile of extra pellets. Proof PSF has actually lied. 
+Within, there is a pile of extra pellets. Proof the prince has actually lied. 
 There is plenty of food to go around. What does he need all this for?
 
 There is another door in this room... Maybe it is an exit?
@@ -141,7 +165,7 @@ You squeeze in between two of the stones. Surely he can't see you here.
 :: controck
 You finally catch your breath for a moment. That is... until...
 
-PSF: Hey! Shrimpy! You thought you could hide from me huh... It is honestly a little pathetic... 
+Prince Shiny Fins: Hey! Shrimpy! You thought you could hide from me huh... It is honestly a little pathetic... 
 Right next to the exit? Really? Whatever... I am starving.
 
 And in an instant... Your short shrimp life flashes before your eyes.
@@ -152,17 +176,20 @@ It is all over...
 
 :: unite
 You, the shrimp colony, and the snails head up to the palace steps. The snails form a line in front of the shrimp.
-
-You: Come out Prince Shiny Fins! It is time to take accountability for your wrongdoing!
-PSF comes out of the palace doorway.
-PSF: Me...? I am sorry... What exactly have I done wrong? I have done nothing but good for this tank!
-You: More like no good! The shrimp colony is starving due to your greediness. 
-I know about your food stash. Why keep it so secret?
-PSF: *He begins to appear more nervous...* Pellet stash? What are you talking about...?
-You: You can't play dumb anymore Prince, the whole tank knows your dirty secret. What are you going to do? Eat us?
-PSF: Why... It is starting to look like a good idea...
-You: Wouldn't it just be easier to come clean and redistribute your food stash as it should have been?
-PSF: You think I am going to take orders from a shrimp?! Hilarious!
+[[Come out Prince Shiny Fins! It is time to take accountability for your wrongdoing!|un1]]
+:: un1
+Prince Shiny Fins comes out of the palace doorway.
+Prince Shiny Fins: Me...? I am sorry... What exactly have I done wrong? I have done nothing but good for this tank!
+[[More like no good! The shrimp colony is starving due to your greediness.  I know about your food stash. Why keep it so secret? | un2]]
+:: un2
+Suddenly, he looks a bit more nervous.
+Prince Shiny Fins: Pellet stash? What are you talking about...?
+[[You can't play dumb anymore Prince, the whole tank knows your dirty secret. What are you going to do? Eat us? | un3]]
+:: un3
+Prince Shiny Fins: Why... It is starting to look like a good idea...
+[[Wouldn't it just be easier to come clean and redistribute your food stash as it should have been? | un4]]
+:: un4 
+Prince Shiny Fins: You think I am going to take orders from a shrimp?! Hilarious!
 
 Suddenly... Orangey and Mr. Carnival appear from behind the palace...
 
@@ -174,18 +201,20 @@ Orangey: Not too good of one... A good prince wouldn't hoard food from his tankm
 
 Orangey and Mr. Carnival join the line with the snails and shrimp.
 
-You: So you could probably eat me... But can you really stop all of us?
+[[So you could probably eat me... But can you really stop all of us? | un5]]
 
-PSF: ... I... I.... *starts crying*...
+:: un5
+Prince Shiny Fins: ... I... I.... *starts crying*...
 
-You: Are you really crying right now?
+[[Are you really crying right now?|un6]]
 
-PSF: I have been so evil... I have treated you all so poorly and exploited your bodies for labor so that MY life could be easier.
+:: un6
+Prince Shiny Fins: I have been so evil... I have treated you all so poorly and exploited your bodies for labor so that MY life could be easier.
 But at the end of the day, no matter how rich I am, I will always be a greedy scumbag...
 
-You: Well I am not disagree with that.
-
-PSF: Okay... I am formally apologizing. I will redistribute the stash immediately.
+[[Well I am not disagree with that... |un7]]
+:: un7
+Prince Shiny Fins: Okay... I am formally apologizing. I will redistribute the stash immediately.
 I am sorry for not seeing the error in my ways. I hope you all can find the space in your heart to forgive me.
 
 Orangey: They may be able to forgive you, but I don't think that I will.  How can we trust having you in power again?
@@ -195,9 +224,20 @@ Shelly: If anyone has had the power to truly unite this tank... I would say it i
 Snamy: I don't think that is a bad idea... Shrimp... Goldies... Do you agree?
 
 The goldfish and shrimp colony all mumble in satisfaction.
-PSF: Okay... <<print $name>>, I relinquish my crown to you. Thank you.
+Prince Shiny Fins: Okay... <<print $name>>, I relinquish my crown to you. Thank you.
 
+[[Return crown, but accept leadership. |leadership]]
 
+:: leadership
+
+You take the crown in your hands, and realize it is not right to wear this symbol of power.
+[[Prince Shiny Fins, I do not want this crown. It implies I rule this tank. The tank should be ruled by the tankmates. If you need someone to help lead, I will accept that offer. Prince, you can hold onto this crown. | returncrown]]
+:: returncrown
+The tankmates cheer you on as you mark your first step as a designated leader.
+Finally... you will have a chance to rest.
+
+[[>>>| storycont]]
+:: storycont
 The next few months went smoothly. As time passed, the tankmates found that the Boss was always destributing just enough rations for everyone.
 Everyone had a part in keeping the tank clean and safe.
 About a year has passed since your first days in the tank.
