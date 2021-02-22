@@ -1,43 +1,60 @@
 :: bubblevillage
-You: Hello! I am new to the tank-
+You make your way towards the snails in the other corner of the tank.
 
-Snail1: Whatever, whatever! The Goldies let us know! Please just leave us alone we have so much to do!
+[[Hello! I am new to the tank- | bv1]]
 
-You: I-
+::bv1
+Shelly: Whatever, whatever! The Goldies let us know! Please just leave us alone we have so much to do!
 
+[[I-| bv2]]
+
+:: bv2
 Snamy: I am so sorry about her. Her mouth moves a lot quicker than she does. Welcome to Bubble Village! We are so excited to meet you!
 
 Shelly: Pleaseee… Snamy! We have to get this baby shower in order! We don’t have time to talk to newcomers right now!
 
 Snamy: Quiet Shelly! Sorry, she has been a mess trying to get our affairs in order before the new snabies come in!
 
-You: Snabies?
+[[ Snabies? | bv3]]
 
+::bv3
 Shelly: SNAIL BABIES!!!
 
 Snamy: Yes… Snail babies. Ms. Fibonacci just laid a few clutches of eggs recently, so we are planning a baby shower! Unfortunately, since Mr. and Ms. Fibonacci retired, our village has gotten too dirty to celebrate anything just yet. Shelly has planned a baby shower, but there’s still so much cleaning up left to do.
 
-You: I can help!
+[[I can help! | bv4]]
 
+:: bv4 
 Shelly: You can?! Oh whew! Now I can finally slow down a bit!
-Snamy: It isn’t like you were going very quickly to begin with… (laughs)
 
-You: Yeah, I really don’t mind. I have my work cut out for me anyways, so I may as well help out where I can.
+Snamy: *chuckles* It isn’t like you were going very quickly to begin with… 
 
+[[Yeah, I really don’t mind. I have my work cut out for me anyways, so I may as well help out where I can. |bv5]]
+
+:: bv5 
 Snamy: Thank you so much!
 
 [[Help clean up for the baby shower. | babyshowerclean]]
 [[Meet the shrimp! |fernpark]]
-[Meet the pleco! | pleco]
+[[Head to palace. | palace]]
+
 :: babyshowerclean
 Here there will be an open plane of gravel but it looks kind of messy/covered in algae, etc. You click on the colored gravel until it is all clean.
 When you are finished there will be a screen that says:
-
+[[That is a lot of algae...|cleanup]]
+:: cleanup
+You: Oh, it really wasn't that hard...
 Shelly: Wow! I haven't seen Bubble Village sparkle like this since we moved in! Thank you so much <<print $name>>. Here is a token of my gratitude. I have been holding onto this for a while.
+
 [[It's a green bean! | greenbean]]
+:: greenbean
+<<set $greenbean to $greenbean+= 1>>
 This will be added to your inventory, you can snack on this now or later.
 
-Snamy: Be sure to come visit us again! We could always use a hand.
+Snamy: Be sure to come visit us again!
+
+[[Head to palace. | palace]]
+[[Visit the shrimp | fernpark]]
 
 :: warnsnails
 Shelly: The whole shrimp colony... What the tank is going on?

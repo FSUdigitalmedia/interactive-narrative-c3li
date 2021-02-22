@@ -1,41 +1,49 @@
 :: fernpark
 You rush towards familiar faces. There is a small colony of shrimp hanging out in some plants in the corner of the tank.
 
-You: Hello! I am new here! Mind if I sit with y’all for a bit?
+[[Hello! I am new here! Mind if I sit with y’all for a bit? | script1]]
 
-Shrimp1: Hello <<print $name>>! I’m Shrebecca! Welcome to Fern Park! This is where most of the shrimp get together if they aren’t working. The Goldfish let us know you were coming. We are so excited to see new shrimp enter the tank!
+:: script1
 
-Shrimp2: Especially since… (starts sobbing)
+Shrebecca: Hello <<print $name>>! I’m Shrebecca! Welcome to Fern Park! This is where most of the shrimp get together if they aren’t working. The Goldfish let us know you were coming. We are so excited to see new shrimp enter the tank!
 
-Shrimp1: Shh shh, Shrimantha… He is in a better place now…
+Shrimantha: Especially since… (starts sobbing)
 
-You: I’m sorry… Did you lose someone?
+Shrebecca: Shh shh, Shrimantha… He is in a better place now…
 
-Shrimp1: Yes… Unfortunately, last week we lost one of our longest living family members… and he was just about to retire. 
+[[I’m sorry… Did you lose someone? | script2]]
 
-You: I am so sorry… If you don’t mind me asking, what happened?
+:: script2
+Shrebecca: Yes… Unfortunately, last week we lost one of our longest living family members… and he was just about to retire. 
 
-Shrimp3: It was those damn Goldies! I’m telling you! I saw it with my own two eyes!
+[[I am so sorry… If you don’t mind me asking, what happened? | script3]]
 
-Shrimp1: Whatever Kevin! You know you have poor eyesight!
-Shrimp3: Fine! Don’t believe me! I know what I saw!
+:: script3
+Kevin: It was those damn Goldies! I’m telling you! I saw it with my own two eyes!
 
-Shrimp1: Don’t mind him. His mind has probably gone hazy since the event. Anyways, you have nothing to fear here. All of our tank mates are pretty harmless. The Goldies can be rude sometimes, but they feed us, so we try not to complain.
+Shrebecca: Whatever Kevin! You know you have poor eyesight!
+Kevin: Fine! Don’t believe me! I know what I saw!
 
-You: Thank you for being so welcoming. I should probably go see them soon now anyways…
-Shrimp1: Understandable kiddo! Be sure to get acquainted with some of the other tank mates too! Know you’re always welcome here in Fern Park. 
+Shrebecca: Don’t mind him. His mind has probably gone hazy since the event. Anyways, you have nothing to fear here. All of our tank mates are pretty harmless. The Goldies can be rude sometimes, but they feed us, so we try not to complain.
 
-[[Meet more shrimp|meetshrimp]]
-:: meetshrimp
-you will have an option to meet 4 other shrimp, one is your new gf :)
+[[Thank you for being so welcoming. I should probably go see them soon now anyways… | script4]]
+:: script4 
+Shrebecca: Understandable kiddo! Know you’re always welcome here in Fern Park. 
 
+[[Head to palace. | palace]]
+<<if $greenbean lt 1>>
+[[Visit Snails | bubblevillage]]<</if>>
 :: warn
 Briskly, you swim towards Fern Park... You will let the shrimp know first...
-You: This is not a drill... PSF has plans to eat us if we want to retire early! He is out to get me right now as I speak!
+
+[[This is not a drill... Prince Shiny Fins has plans to eat us if we want to retire early! He is out to get me right now as I speak! | ws1]]
+:: ws1
 Shrebecca: Wait a minute! How can we trust you!
-You: I saw the food stash! He told me he couldn't pay me my wages, but it is because he is hoarding the food and threatening anyone who comes close to collecting their wages.
+[[ I saw the food stash! He told me he couldn't pay me my wages, but it is because he is hoarding the food and threatening anyone who comes close to collecting their wages. | ws2]]
+::ws2
 Kevin: I believe him.
 Shrebecca: Well... He can try to stop all of us... One shrimp versus a fish like that can only do so much, but when we work together... We may have a chance at change.
-You: Let's do it!
+[[Let's do it! | ws3]]
+::ws3
 Shrebecca: Let's warn the snails as well!
 [[Warn snails!|warnsnails]]

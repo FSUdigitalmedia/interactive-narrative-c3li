@@ -1,52 +1,98 @@
 :: palace
 
-GF: Ahh! Welcome in <<print $name>>! We have been waiting for you to arrive!
+Prince Shiny Fins: Ahh! Welcome in <<print $name>>! We have been waiting for you to arrive!
 
-GF2: *mumbles* It’s about time… my room is filthy…
+Orangey: *mumbles* It’s about time… my room is filthy…
 
-GF: Anyways! Let us get started, shall we? 
+Prince Shiny Fins: Anyways! Let us get started, shall we? 
 
-You: I’m ready! Let’s get to work!
+[[I’m ready! Let’s get to work! | p1]]
+:: p1
+Prince Shiny Fins: Amazing! I have created a list of tasks for you… You will need to complete these tasks and report back to me to earn your pellets. Do a thorough job, as my men will check on your progress periodically. You are welcome to explore the tank as you feel, but make sure you are getting your tasks accomplished, or you will never retire! (Laughs)
 
-GF: Amazing! I have created a list of tasks for you… You will need to complete these tasks and report back to me to earn your pellets. Do a thorough job, as my men will check on your progress periodically. You are welcome to explore the tank as you feel, but make sure you are getting your tasks accomplished, or you will never retire! (Laughs)
+You laugh nervously...
 
-You: *laughs nervously*
+Prince Shiny Fins: Aha! Here are your list of tasks. 
+Just report back when you are done, and we will grant you your Pellets. 
+If you are doing a superb job, sometimes we will treat you with an extra Bonus. 
 
-GF: Aha! Here are your list of tasks. Some are based on cleaning up the general tank area, and others are based on cleaning the various rooms in the Goldfish Palace. Just report back when you are done, and we will grant you your Pellets. If you are doing a superb job, sometimes we will treat you with an extra Bonus. Sound good?
+Sound good?
 
-You: Yup!
-[[completed]]
+[[Yup! | tasklist]]
 
+::tasklist
 [[Orangey's Room|orangey]]
-:: orangey
-
 [[Pebble Perfection|ppentry]]
-:: ppentry
-[[Mr. Carnival |carnival]]
-:: carnival
-
 [[Mr. Shiny Fin’s Office|SFO]]
+<<if $greenbean gte 3>>
+[[I am all done.|completed]]<</if>>
+
+:: orangey
+Prince Shiny Fins leads your way to Orangey's Room.
+Orangey: Nice! You're here! Sorry for the mess... Have fun cleaning it! *chuckles*
+
+[[Alright I guess I will get started! | cleanorangey]]
+::cleanorangey
+That was easy... I am too good at this.
+
+Orangey: Wow! That was fast! You are just too good at this!
+
+[[That is what I just said... |anyways]]
+:: anyways
+Orangey: Oh... Anyways... Do you want this greenbean?
+[[Sure! | yesgreenbean]]
+:: yesgreenbean
+<<set $greenbean to +=1>>
+Nice...
+What next...
+[[Do another task. | tasklist]]
+
+
+:: ppentry
+Prince Shiny Fins leads you to the front of the tank.
+
+Prince Shiny Fins: This is what everyone looking in will see first.
+Can you clean this up?
+[[Clean up the front of the tank. |ppclean]]
+:: ppclean
+Wow,that was fast.
+[[Honestly I am too fast for my own good. | ppdone]]
+Prince Shiny Fins rushes besides you.
+That was speedy... Fantastic!
+Here is a greenbean to mark your progress.
+[[Sweet! Bean...! | greenbean2]]
+:: greenbean2
+<<set $greenbean to $greenbean+=1>>
+What next?
+[[Another task?|tasklist]]
 :: SFO
 
-[[All my tasks are completed!|completed]]
+
 :: completed
-PSF: Ah... It appears as though you have completed all your tasks!
-You: Yep! Finally got them done! Can I earn my wages now so I can retire?
-PSF: You see, there has been an issue with our financials... I will not be able to pay you your wages... We have a really bad pellet shortage at the moment...
-You: I thought the Boss supplied the pellets to us?
-PSF: Yes... But there hasn't been any dropouts in a while. In order to keep things fair I think you'll just have to keep working until supply comes back.
-You: ... But I was told I could retire after I finished all my tasks...
-PSF: *laughs* It is funny to me you think it is going to be that easy...
-You: hm...?
-PSF: You have left me with a difficult decision to make now... No one has ever retired here...
+Prince Shiny Fins: Ah... It appears as though you have completed all your tasks!
+[[ Yep! Finally got them done! Can I earn my wages now so I can retire? |retire1]]
+:: retire 1
+Prince Shiny Fins: You see, there has been an issue with our financials... I will not be able to pay you your wages... We have a really bad pellet shortage at the moment...
+[[I thought the Boss supplied the pellets to us?|retire2]]
+:: retire2
+Prince Shiny Fins: Yes... But there hasn't been any dropouts in a while. In order to keep things fair I think you'll just have to keep working until supply comes back.
+[[... But I was told I could retire after I finished all my tasks...| retire 3]]
+:: retire3
+Prince Shiny Fins: *laughs* It is funny to me you think it is going to be that easy...
+[[ hm...? |retire4]]
+:: retire4
+Prince Shiny Fins: You have left me with a difficult decision to make now... No one has ever retired here...
 You see, there is far too much work to do. I can't do it myself! If you retire then who is going to do the dirty work?
-You: You told me I could retire after I finish my tasks...
-PSF: It usually takes a little shrimp their whole life to finish the tasks I set out for them... You worked pretty fast!
+[[ You told me I could retire after I finish my tasks...| retire5]]
+:: retire5
+Prince Shiny Fins: It usually takes a little shrimp their whole life to finish the tasks I set out for them... You worked pretty fast!
 Too fast...
-You: Too fast?!
-PSF: *he chuckles to himself* It would be a lot easier to just treat you like the rest. You're so replaceable...
-You: What do you mean?
-PSF: Oh you are so naive... 
+[[ Too fast?!| retire6]]
+:: retire6
+Prince Shiny Fins: *chuckles* It would be a lot easier to just treat you like the rest. You're so replaceable...
+[[What do you mean? |retire7]]
+:: retire 7
+Prince Shiny Fins: Oh you are so naive... 
 He looks at me menacingly... I think it's time I [[get out of here | get out]]
 :: get out
 Quick! He is right behind you!

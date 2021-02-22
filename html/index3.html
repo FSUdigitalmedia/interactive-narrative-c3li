@@ -100,7 +100,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://F3BD8DC3-3BB1-425B-9F6C-FFC5EE93E3AC// --><tw-storydata name="Bottom Dweller" startnode="8" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="F3BD8DC3-3BB1-425B-9F6C-FFC5EE93E3AC" zoom="1" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "speech.min.css" */
+	<!-- UUID://F3BD8DC3-3BB1-425B-9F6C-FFC5EE93E3AC// --><tw-storydata name="Bottom Dweller" startnode="21" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="F3BD8DC3-3BB1-425B-9F6C-FFC5EE93E3AC" zoom="1" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "speech.min.css" */
 /* speech.min.css, by chapel; for use with speech.js */
 .say{border:1px solid #eee;overflow:auto}.say img{max-width:20%;float:left;margin-right:1em}.say p:first-of-type{font-weight:700;margin:.2em 0;border-bottom:1px solid #eee}.say p:last-of-type{padding:.5em;margin:0}
 /* twine-user-stylesheet #2: "style.css" */
@@ -114,7 +114,7 @@ body {
   }
   
   p {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
   }
   </style><script role="script" id="twine-user-script" type="text/twine-javascript">/* twine-user-script #1: "meters.min.js" */
@@ -126,43 +126,40 @@ body {
 // speech.min.js, for SugarCube 2, by Chapel
 // v1.0.1, 2021-01-22, 404cc7678295ca61a8b0b8bc3fa5d54dba6ac858
 ;!function(){"use strict";var t=new Map;function a(a,e){if(State.length)throw new Error("addCharacter() -> must be called before story starts");a&&e?(t.has(a)&&console.error('addCharacter() -> overwriting character "'+a+'"'),t.set(a,e)):console.error("addCharacter() -> invalid arguments")}function e(a,e,r,s){var n=$(document.createElement("div")).addClass(Util.slugify(e)+" say"),c=$(document.createElement("img")).attr("src",s||t.get(e)||"");return c.attr("src")&&c.attr("src").trim()&&n.append(c),n.append($(document.createElement("p")).wiki(e.toUpperFirst())).append($(document.createElement("p")).wiki(r)),a&&(a instanceof $||(a=$(a)),n.appendTo(a)),n}setup.say=e,setup.addCharacter=a,Macro.add("character",{handler:function(){a(this.args[0],this.args[1])}}),$(document).one(":passagestart",(function(){var a=Array.from(t.keys());a.push("say"),Macro.add(a,{tags:null,handler:function(){"say"!==this.name?e(this.output,this.name,this.payload[0].contents):e(this.output,this.args[0],this.payload[0].contents,this.args[1])}})}))}();
-// end speech.min.js</script><tw-passagedata pid="1" name="bubblevillage" tags="" position="100,100" size="100,100">You: Hello! I am new to the tank-
+// end speech.min.js</script><tw-passagedata pid="1" name="bubblevillage" tags="" position="100,100" size="100,100">You make your way towards the snails in the other corner of the tank.
 
-Snail1: Whatever, whatever! The Goldies let us know! Please just leave us alone we have so much to do!
+[[Hello! I am new to the tank- | bv1]]</tw-passagedata><tw-passagedata pid="2" name="bv1" tags="" position="225,100" size="100,100">Shelly: Whatever, whatever! The Goldies let us know! Please just leave us alone we have so much to do!
 
-You: I-
-
-Snamy: I am so sorry about her. Her mouth moves a lot quicker than she does. Welcome to Bubble Village! We are so excited to meet you!
+[[I-| bv2]]</tw-passagedata><tw-passagedata pid="3" name="bv2" tags="" position="350,100" size="100,100">Snamy: I am so sorry about her. Her mouth moves a lot quicker than she does. Welcome to Bubble Village! We are so excited to meet you!
 
 Shelly: Pleaseee… Snamy! We have to get this baby shower in order! We don’t have time to talk to newcomers right now!
 
 Snamy: Quiet Shelly! Sorry, she has been a mess trying to get our affairs in order before the new snabies come in!
 
-You: Snabies?
-
-Shelly: SNAIL BABIES!!!
+[[ Snabies? | bv3]]</tw-passagedata><tw-passagedata pid="4" name="bv3" tags="" position="475,100" size="100,100">Shelly: SNAIL BABIES!!!
 
 Snamy: Yes… Snail babies. Ms. Fibonacci just laid a few clutches of eggs recently, so we are planning a baby shower! Unfortunately, since Mr. and Ms. Fibonacci retired, our village has gotten too dirty to celebrate anything just yet. Shelly has planned a baby shower, but there’s still so much cleaning up left to do.
 
-You: I can help!
+[[I can help! | bv4]]</tw-passagedata><tw-passagedata pid="5" name="bv4" tags="" position="600,100" size="100,100">Shelly: You can?! Oh whew! Now I can finally slow down a bit!
 
-Shelly: You can?! Oh whew! Now I can finally slow down a bit!
-Snamy: It isn’t like you were going very quickly to begin with… (laughs)
+Snamy: *chuckles* It isn’t like you were going very quickly to begin with… 
 
-You: Yeah, I really don’t mind. I have my work cut out for me anyways, so I may as well help out where I can.
-
-Snamy: Thank you so much!
+[[Yeah, I really don’t mind. I have my work cut out for me anyways, so I may as well help out where I can. |bv5]]</tw-passagedata><tw-passagedata pid="6" name="bv5" tags="" position="725,100" size="100,100">Snamy: Thank you so much!
 
 [[Help clean up for the baby shower. | babyshowerclean]]
 [[Meet the shrimp! |fernpark]]
-[Meet the pleco! | pleco]</tw-passagedata><tw-passagedata pid="2" name="babyshowerclean" tags="" position="225,100" size="100,100">Here there will be an open plane of gravel but it looks kind of messy/covered in algae, etc. You click on the colored gravel until it is all clean.
+[[Head to palace. | palace]]</tw-passagedata><tw-passagedata pid="7" name="babyshowerclean" tags="" position="850,100" size="100,100">Here there will be an open plane of gravel but it looks kind of messy/covered in algae, etc. You click on the colored gravel until it is all clean.
 When you are finished there will be a screen that says:
-
+[[That is a lot of algae...|cleanup]]</tw-passagedata><tw-passagedata pid="8" name="cleanup" tags="" position="975,100" size="100,100">You: Oh, it really wasn&#39;t that hard...
 Shelly: Wow! I haven&#39;t seen Bubble Village sparkle like this since we moved in! Thank you so much &lt;&lt;print $name&gt;&gt;. Here is a token of my gratitude. I have been holding onto this for a while.
-[[It&#39;s a green bean! | greenbean]]
+
+[[It&#39;s a green bean! | greenbean]]</tw-passagedata><tw-passagedata pid="9" name="greenbean" tags="" position="1100,100" size="100,100">&lt;&lt;set $greenbean to $greenbean+= 1&gt;&gt;
 This will be added to your inventory, you can snack on this now or later.
 
-Snamy: Be sure to come visit us again! We could always use a hand.</tw-passagedata><tw-passagedata pid="3" name="warnsnails" tags="" position="350,100" size="100,100">Shelly: The whole shrimp colony... What the tank is going on?
+Snamy: Be sure to come visit us again!
+
+[[Head to palace. | palace]]
+[[Visit the shrimp | fernpark]]</tw-passagedata><tw-passagedata pid="10" name="warnsnails" tags="" position="1225,100" size="100,100">Shelly: The whole shrimp colony... What the tank is going on?
 You: We must act fast. The Goldfish have plans to eat anyone who wants to retire early. I just tried and he said he didn&#39;t have enough pellets to pay my retirement, but he is hoarding the stash of pellets! There is plenty to go around!
 Snamy: I knew it! We haven&#39;t been paid nearly enough recently! He kept saying the Boss wasn&#39;t dropping enough to feed us!
 You: It&#39;s not true! 
@@ -172,140 +169,147 @@ Shelly: We weren&#39;t really living before this... Let&#39;s do it.
 
 You: Thank you snails... Let&#39;s go to the palace!
 
-[[Unite and confront the goldfish.|unite]]</tw-passagedata><tw-passagedata pid="4" name="fernpark" tags="" position="475,100" size="100,100">You rush towards familiar faces. There is a small colony of shrimp hanging out in some plants in the corner of the tank.
+[[Unite and confront the goldfish.|unite]]</tw-passagedata><tw-passagedata pid="11" name="fernpark" tags="" position="100,225" size="100,100">You rush towards familiar faces. There is a small colony of shrimp hanging out in some plants in the corner of the tank.
 
-You: Hello! I am new here! Mind if I sit with y’all for a bit?
+[[Hello! I am new here! Mind if I sit with y’all for a bit? | script1]]</tw-passagedata><tw-passagedata pid="12" name="script1" tags="" position="225,225" size="100,100">Shrebecca: Hello &lt;&lt;print $name&gt;&gt;! I’m Shrebecca! Welcome to Fern Park! This is where most of the shrimp get together if they aren’t working. The Goldfish let us know you were coming. We are so excited to see new shrimp enter the tank!
 
-Shrimp1: Hello &lt;&lt;print $name&gt;&gt;! I’m Shrebecca! Welcome to Fern Park! This is where most of the shrimp get together if they aren’t working. The Goldfish let us know you were coming. We are so excited to see new shrimp enter the tank!
+Shrimantha: Especially since… (starts sobbing)
 
-Shrimp2: Especially since… (starts sobbing)
+Shrebecca: Shh shh, Shrimantha… He is in a better place now…
 
-Shrimp1: Shh shh, Shrimantha… He is in a better place now…
+[[I’m sorry… Did you lose someone? | script2]]</tw-passagedata><tw-passagedata pid="13" name="script2" tags="" position="350,225" size="100,100">Shrebecca: Yes… Unfortunately, last week we lost one of our longest living family members… and he was just about to retire. 
 
-You: I’m sorry… Did you lose someone?
+[[I am so sorry… If you don’t mind me asking, what happened? | script3]]</tw-passagedata><tw-passagedata pid="14" name="script3" tags="" position="475,225" size="100,100">Kevin: It was those damn Goldies! I’m telling you! I saw it with my own two eyes!
 
-Shrimp1: Yes… Unfortunately, last week we lost one of our longest living family members… and he was just about to retire. 
+Shrebecca: Whatever Kevin! You know you have poor eyesight!
+Kevin: Fine! Don’t believe me! I know what I saw!
 
-You: I am so sorry… If you don’t mind me asking, what happened?
+Shrebecca: Don’t mind him. His mind has probably gone hazy since the event. Anyways, you have nothing to fear here. All of our tank mates are pretty harmless. The Goldies can be rude sometimes, but they feed us, so we try not to complain.
 
-Shrimp3: It was those damn Goldies! I’m telling you! I saw it with my own two eyes!
+[[Thank you for being so welcoming. I should probably go see them soon now anyways… | script4]]</tw-passagedata><tw-passagedata pid="15" name="script4" tags="" position="600,225" size="100,100">Shrebecca: Understandable kiddo! Know you’re always welcome here in Fern Park. 
 
-Shrimp1: Whatever Kevin! You know you have poor eyesight!
-Shrimp3: Fine! Don’t believe me! I know what I saw!
+[[Head to palace. | palace]]
+&lt;&lt;if $greenbean lt 1&gt;&gt;
+[[Visit Snails | bubblevillage]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="warn" tags="" position="725,225" size="100,100">Briskly, you swim towards Fern Park... You will let the shrimp know first...
 
-Shrimp1: Don’t mind him. His mind has probably gone hazy since the event. Anyways, you have nothing to fear here. All of our tank mates are pretty harmless. The Goldies can be rude sometimes, but they feed us, so we try not to complain.
-
-You: Thank you for being so welcoming. I should probably go see them soon now anyways…
-Shrimp1: Understandable kiddo! Be sure to get acquainted with some of the other tank mates too! Know you’re always welcome here in Fern Park. 
-
-[[Meet more shrimp|meetshrimp]]</tw-passagedata><tw-passagedata pid="5" name="meetshrimp" tags="" position="600,100" size="100,100">you will have an option to meet 4 other shrimp, one is your new gf :)</tw-passagedata><tw-passagedata pid="6" name="warn" tags="" position="725,100" size="100,100">Briskly, you swim towards Fern Park... You will let the shrimp know first...
-You: This is not a drill... PSF has plans to eat us if we want to retire early! He is out to get me right now as I speak!
-Shrebecca: Wait a minute! How can we trust you!
-You: I saw the food stash! He told me he couldn&#39;t pay me my wages, but it is because he is hoarding the food and threatening anyone who comes close to collecting their wages.
-Kevin: I believe him.
+[[This is not a drill... Prince Shiny Fins has plans to eat us if we want to retire early! He is out to get me right now as I speak! | ws1]]</tw-passagedata><tw-passagedata pid="17" name="ws1" tags="" position="850,225" size="100,100">Shrebecca: Wait a minute! How can we trust you!
+[[ I saw the food stash! He told me he couldn&#39;t pay me my wages, but it is because he is hoarding the food and threatening anyone who comes close to collecting their wages. | ws2]]</tw-passagedata><tw-passagedata pid="18" name="ws2" tags="" position="975,225" size="100,100">Kevin: I believe him.
 Shrebecca: Well... He can try to stop all of us... One shrimp versus a fish like that can only do so much, but when we work together... We may have a chance at change.
-You: Let&#39;s do it!
-Shrebecca: Let&#39;s warn the snails as well!
-[[Warn snails!|warnsnails]]</tw-passagedata><tw-passagedata pid="7" name="StoryInit" tags="" position="850,100" size="100,100">[[Continue|meters2]]</tw-passagedata><tw-passagedata pid="8" name="Start" tags="" position="975,100" size="100,100">From as early as you can remember, you’ve been in Frankie’s Fish and Feed.  
+[[Let&#39;s do it! | ws3]]</tw-passagedata><tw-passagedata pid="19" name="ws3" tags="" position="1100,225" size="100,100">Shrebecca: Let&#39;s warn the snails as well!
+[[Warn snails!|warnsnails]]</tw-passagedata><tw-passagedata pid="20" name="StoryInit" tags="" position="1225,225" size="100,100">&lt;&lt;set $algaecleaned to 0&gt;&gt;
+&lt;&lt;set $greenbean to 0&gt;&gt;
+[[Continue|meters2]]</tw-passagedata><tw-passagedata pid="21" name="Start" tags="" position="100,350" size="100,100">From as early as you can remember, you’ve been in Frankie’s Fish and Feed.  
 You have always been comfortable in your small tank because you were surrounded by some of my best shrimpy friends. 
 There are a few snails in your tank as well, but they don’t speak much, so you usually leave them be. 
 
-Today started out just like any other day,  until a net splashed into your tank. 
+[[&gt;&gt;&gt;| intro1]]</tw-passagedata><tw-passagedata pid="22" name="intro1" tags="" position="225,350" size="100,100">Today started out just like any other day,  until a net splashed into your tank. 
 You attempted to swim away, but it scooped you up. 
 You are placed in a plastic bag with some of your tank water. 
 You didn’t even get to say goodbye to your friends…
-
-The next few moments are a blur. 
+[[&gt;&gt;&gt;|intro2]]</tw-passagedata><tw-passagedata pid="23" name="intro2" tags="" position="350,350" size="100,100">The next few moments are a blur. 
 You can only see the reflective plastic. 
 You are shuffled around a bit, and suddenly, your bag is placed in an area with familiar walls. 
 It is another tank, but it isn’t your home.
-
-As you peer through the plastic, you can&#39;t help but to notice a beautiful, bustling tank. 
+[[&gt;&gt;&gt;|intro3]]</tw-passagedata><tw-passagedata pid="24" name="intro3" tags="" position="475,350" size="100,100">As you peer through the plastic, you can&#39;t help but to notice a beautiful, bustling tank. 
 There are many snails, fish, and even other shrimp. 
 You finally relax a bit. You realize quickly this will be your new home. 
 You try to get comfortable as the water temperature changes slowly…
 
-*tap tap tap*
+[[Time to catch some Zs... | intro4]]</tw-passagedata><tw-passagedata pid="25" name="intro4" tags="" position="600,350" size="100,100">*tap tap tap*
+
 You suddenly awaken to 3 goldfish staring at you from outside the plastic.
-PSF: “Welcome newcomer! Quite interesting, you are alone. Usually the shrimpies come with some friends…”
+Prince Shiny Fins: Welcome newcomer! Quite interesting, you are alone. Usually the shrimpies come with some friends…
 
-Orangey: “At least we have a replacement… Since the incident…”
+Orangey: At least we have a replacement… Since the incident…
 
-SPF: “Let’s not delve into that right now! We don’t want to scare him! I am sorry kiddo…. How rude of me I didn’t even ask for your name!”
-&lt;&lt;textbox &quot;$name&quot; &quot;&quot; &quot;continue1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="continue1" tags="" position="1100,100" size="100,100">&lt;&lt;say &#39;Prince Shiny Fins&#39;&gt;&gt; Hmm… That’s interesting! I am Prince Shiny Fins, and I am the elected leader of this tank. Now &lt;&lt;print $name&gt;&gt;, let me explain some of the rules here! &lt;&lt;/say&gt;&gt;
+Prince Shiny Fins: Let’s not delve into that right now! We don’t want to scare him! I am sorry kiddo…. How rude of me I didn’t even ask for your name!
+&lt;&lt;textbox &quot;$name&quot; &quot;&quot; &quot;continue1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="continue1" tags="" position="725,350" size="100,100">Hmm… That’s interesting! I am Prince Shiny Fins, and I am the elected leader of this tank. Now &lt;&lt;print $name&gt;&gt;, let me explain some of the rules here! 
 
-&lt;&lt;say &#39;$name&#39;&gt;&gt; Rules? &lt;&lt;/say&gt;&gt;
+[[Rules? | psf1]]</tw-passagedata><tw-passagedata pid="27" name="psf1" tags="" position="850,350" size="100,100">Ah yes! We have a very advanced society here, and we know you will come to really love it here! As a shrimp, you have a selection of duties you must perform in order to keep up the scenery and ensure our tank is kept pristine! In exchange for doing tasks, you will be rewarded through our Pellet system. Once the big boss comes through with the Pellets, we will divide them out equally amongst our working residents. I will explain more after you finally enter the tank. Once the Boss finally lets you in, be sure to see me in the Palace. I will explain some of the benefits in more detail.
 
-&lt;&lt;say &#39;Prince Shiny Fins&#39;&gt;&gt; Ah yes! We have a very advanced society here, and we know you will come to really love it here! As a shrimp, you have a selection of duties you must perform in order to keep up the scenery and ensure our tank is kept pristine! In exchange for doing tasks, you will be rewarded through our Pellet system. Once the big boss comes through with the Pellets, we will divide them out equally amongst our working residents. I will explain more after you finally enter the tank. Once the Boss finally lets you in, be sure to see me in the Palace. I will explain some of the benefits in more detail. &lt;&lt;/say&gt;&gt;
+Orangey: We are truly sooo excited to really get to know you!
 
-&lt;&lt;say &#39;Orangey&#39;&gt;&gt; “We are truly sooo excited to really get to know you!” &lt;&lt;/say&gt;&gt;
+[[Okay! That is a lot to take in but I am sure I will get used to it!|psf2]]</tw-passagedata><tw-passagedata pid="28" name="psf2" tags="" position="975,350" size="100,100">Prince Shiny Fins: “Surely! See you soon shrimpy!”
 
-&lt;&lt;say &#39;$name&#39;&gt;&gt; Okay! That is a lot to take in but I am sure I will get used to it!&lt;&lt;/say&gt;&gt;
+[[&gt;&gt;&gt;|sometime]]</tw-passagedata><tw-passagedata pid="29" name="sometime" tags="" position="1100,350" size="100,100">Some time passes, and suddenly, huge hands open the lid of the tank. The Boss cuts open the plastic bag and slips you into the tank. The water is nice and warm. It has a different flavor that what you are used to, but it isn’t that bad.
 
-GF: “Surely! See you soon shrimpy!”
-
-——
-Some time passes, and suddenly, huge hands open the lid of the tank. The Boss cuts open the plastic bag and slips you into the tank. The water is nice and warm. It has a different flavor that what you are used to, but it isn’t that bad.
-
-You: Alrighty… Where should I go first…
+Alrighty… Where should you go first…
 
 [[Meet the snails | bubblevillage]]
 [[Meet the shrimp | fernpark]]
-[[Head to the palace | palace]]</tw-passagedata><tw-passagedata pid="10" name="palace" tags="" position="1225,100" size="100,100">GF: Ahh! Welcome in &lt;&lt;print $name&gt;&gt;! We have been waiting for you to arrive!
+[[Head to the palace | palace]]</tw-passagedata><tw-passagedata pid="30" name="palace" tags="" position="1225,350" size="100,100">Prince Shiny Fins: Ahh! Welcome in &lt;&lt;print $name&gt;&gt;! We have been waiting for you to arrive!
 
-GF2: *mumbles* It’s about time… my room is filthy…
+Orangey: *mumbles* It’s about time… my room is filthy…
 
-GF: Anyways! Let us get started, shall we? 
+Prince Shiny Fins: Anyways! Let us get started, shall we? 
 
-You: I’m ready! Let’s get to work!
+[[I’m ready! Let’s get to work! | p1]]</tw-passagedata><tw-passagedata pid="31" name="p1" tags="" position="100,475" size="100,100">Prince Shiny Fins: Amazing! I have created a list of tasks for you… You will need to complete these tasks and report back to me to earn your pellets. Do a thorough job, as my men will check on your progress periodically. You are welcome to explore the tank as you feel, but make sure you are getting your tasks accomplished, or you will never retire! (Laughs)
 
-GF: Amazing! I have created a list of tasks for you… You will need to complete these tasks and report back to me to earn your pellets. Do a thorough job, as my men will check on your progress periodically. You are welcome to explore the tank as you feel, but make sure you are getting your tasks accomplished, or you will never retire! (Laughs)
+You laugh nervously...
 
-You: *laughs nervously*
+Prince Shiny Fins: Aha! Here are your list of tasks. 
+Just report back when you are done, and we will grant you your Pellets. 
+If you are doing a superb job, sometimes we will treat you with an extra Bonus. 
 
-GF: Aha! Here are your list of tasks. Some are based on cleaning up the general tank area, and others are based on cleaning the various rooms in the Goldfish Palace. Just report back when you are done, and we will grant you your Pellets. If you are doing a superb job, sometimes we will treat you with an extra Bonus. Sound good?
+Sound good?
 
-You: Yup!
-[[completed]]
+[[Yup! | tasklist]]</tw-passagedata><tw-passagedata pid="32" name="tasklist" tags="" position="225,475" size="100,100">[[Orangey&#39;s Room|orangey]]
+[[Pebble Perfection|ppentry]]
+[[Mr. Shiny Fin’s Office|SFO]]
+&lt;&lt;if $greenbean gte 3&gt;&gt;
+[[I am all done.|completed]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="orangey" tags="" position="350,475" size="100,100">Prince Shiny Fins leads your way to Orangey&#39;s Room.
+Orangey: Nice! You&#39;re here! Sorry for the mess... Have fun cleaning it! *chuckles*
 
-[[Orangey&#39;s Room|orangey]]</tw-passagedata><tw-passagedata pid="11" name="orangey" tags="" position="100,225" size="100,100">[[Pebble Perfection|ppentry]]</tw-passagedata><tw-passagedata pid="12" name="ppentry" tags="" position="225,225" size="100,100">[[Mr. Carnival |carnival]]</tw-passagedata><tw-passagedata pid="13" name="carnival" tags="" position="350,225" size="100,100">[[Mr. Shiny Fin’s Office|SFO]]</tw-passagedata><tw-passagedata pid="14" name="SFO" tags="" position="475,225" size="100,100">[[All my tasks are completed!|completed]]</tw-passagedata><tw-passagedata pid="15" name="completed" tags="" position="600,225" size="100,100">PSF: Ah... It appears as though you have completed all your tasks!
-You: Yep! Finally got them done! Can I earn my wages now so I can retire?
-PSF: You see, there has been an issue with our financials... I will not be able to pay you your wages... We have a really bad pellet shortage at the moment...
-You: I thought the Boss supplied the pellets to us?
-PSF: Yes... But there hasn&#39;t been any dropouts in a while. In order to keep things fair I think you&#39;ll just have to keep working until supply comes back.
-You: ... But I was told I could retire after I finished all my tasks...
-PSF: *laughs* It is funny to me you think it is going to be that easy...
-You: hm...?
-PSF: You have left me with a difficult decision to make now... No one has ever retired here...
+[[Alright I guess I will get started! | cleanorangey]]</tw-passagedata><tw-passagedata pid="34" name="cleanorangey" tags="" position="475,475" size="100,100">That was easy... I am too good at this.
+
+Orangey: Wow! That was fast! You are just too good at this!
+
+[[That is what I just said... |anyways]]</tw-passagedata><tw-passagedata pid="35" name="anyways" tags="" position="600,475" size="100,100">Orangey: Oh... Anyways... Do you want this greenbean?
+[[Sure! | yesgreenbean]]</tw-passagedata><tw-passagedata pid="36" name="yesgreenbean" tags="" position="725,475" size="100,100">&lt;&lt;set $greenbean to +=1&gt;&gt;
+Nice...
+What next...
+[[Do another task. | tasklist]]</tw-passagedata><tw-passagedata pid="37" name="ppentry" tags="" position="850,475" size="100,100">Prince Shiny Fins leads you to the front of the tank.
+
+Prince Shiny Fins: This is what everyone looking in will see first.
+Can you clean this up?
+[[Clean up the front of the tank. |ppclean]]</tw-passagedata><tw-passagedata pid="38" name="ppclean" tags="" position="975,475" size="100,100">Wow,that was fast.
+[[Honestly I am too fast for my own good. | ppdone]]
+Prince Shiny Fins rushes besides you.
+That was speedy... Fantastic!
+Here is a greenbean to mark your progress.
+[[Sweet! Bean...! | greenbean2]]</tw-passagedata><tw-passagedata pid="39" name="greenbean2" tags="" position="1100,475" size="100,100">&lt;&lt;set $greenbean to $greenbean+=1&gt;&gt;
+What next?
+[[Another task?|tasklist]]</tw-passagedata><tw-passagedata pid="40" name="SFO" tags="" position="1225,475" size="100,100"></tw-passagedata><tw-passagedata pid="41" name="completed" tags="" position="100,600" size="100,100">Prince Shiny Fins: Ah... It appears as though you have completed all your tasks!
+[[ Yep! Finally got them done! Can I earn my wages now so I can retire? |retire1]]</tw-passagedata><tw-passagedata pid="42" name="retire 1" tags="" position="225,600" size="100,100">Prince Shiny Fins: You see, there has been an issue with our financials... I will not be able to pay you your wages... We have a really bad pellet shortage at the moment...
+[[I thought the Boss supplied the pellets to us?|retire2]]</tw-passagedata><tw-passagedata pid="43" name="retire2" tags="" position="350,600" size="100,100">Prince Shiny Fins: Yes... But there hasn&#39;t been any dropouts in a while. In order to keep things fair I think you&#39;ll just have to keep working until supply comes back.
+[[... But I was told I could retire after I finished all my tasks...| retire 3]]</tw-passagedata><tw-passagedata pid="44" name="retire3" tags="" position="475,600" size="100,100">Prince Shiny Fins: *laughs* It is funny to me you think it is going to be that easy...
+[[ hm...? |retire4]]</tw-passagedata><tw-passagedata pid="45" name="retire4" tags="" position="600,600" size="100,100">Prince Shiny Fins: You have left me with a difficult decision to make now... No one has ever retired here...
 You see, there is far too much work to do. I can&#39;t do it myself! If you retire then who is going to do the dirty work?
-You: You told me I could retire after I finish my tasks...
-PSF: It usually takes a little shrimp their whole life to finish the tasks I set out for them... You worked pretty fast!
+[[ You told me I could retire after I finish my tasks...| retire5]]</tw-passagedata><tw-passagedata pid="46" name="retire5" tags="" position="725,600" size="100,100">Prince Shiny Fins: It usually takes a little shrimp their whole life to finish the tasks I set out for them... You worked pretty fast!
 Too fast...
-You: Too fast?!
-PSF: *he chuckles to himself* It would be a lot easier to just treat you like the rest. You&#39;re so replaceable...
-You: What do you mean?
-PSF: Oh you are so naive... 
-He looks at me menacingly... I think it&#39;s time I [[get out of here | get out]]</tw-passagedata><tw-passagedata pid="16" name="get out" tags="" position="725,225" size="100,100">Quick! He is right behind you!
+[[ Too fast?!| retire6]]</tw-passagedata><tw-passagedata pid="47" name="retire6" tags="" position="850,600" size="100,100">Prince Shiny Fins: *chuckles* It would be a lot easier to just treat you like the rest. You&#39;re so replaceable...
+[[What do you mean? |retire7]]</tw-passagedata><tw-passagedata pid="48" name="retire 7" tags="" position="975,600" size="100,100">Prince Shiny Fins: Oh you are so naive... 
+He looks at me menacingly... I think it&#39;s time I [[get out of here | get out]]</tw-passagedata><tw-passagedata pid="49" name="get out" tags="" position="1100,600" size="100,100">Quick! He is right behind you!
 
-[[LEFT | left1]]</tw-passagedata><tw-passagedata pid="17" name="left" tags="" position="850,225" size="100,100">It is a deadend!
+[[LEFT | left1]]</tw-passagedata><tw-passagedata pid="50" name="left" tags="" position="1225,600" size="100,100">It is a deadend!
 [[Go back | right1]]
-[[RIGHT | right1]]</tw-passagedata><tw-passagedata pid="18" name="right1" tags="" position="975,225" size="100,100">[[LEFT | left2]]
-[[RIGHT | right2]]</tw-passagedata><tw-passagedata pid="19" name="left2" tags="" position="1100,225" size="100,100">There is a door this way. It says &#39;Prince Quarters&#39;. 
+[[RIGHT | right1]]</tw-passagedata><tw-passagedata pid="51" name="right1" tags="" position="100,725" size="100,100">[[LEFT | left2]]
+[[RIGHT | right2]]</tw-passagedata><tw-passagedata pid="52" name="left2" tags="" position="225,725" size="100,100">There is a door this way. It says &#39;Prince Quarters&#39;. 
 There is a crack small enough for you to go through.
 You feel compelled to enter.
-[[Squeeze through the cracks. | psf room]]</tw-passagedata><tw-passagedata pid="20" name="right2" tags="" position="1225,225" size="100,100">There is just a garbage can... How can you accumulate trash underwater...?
-[[Go back. | left 2]]</tw-passagedata><tw-passagedata pid="21" name="psf room" tags="" position="100,350" size="100,100">Within, there is a pile of extra pellets. Proof PSF has actually lied. 
+[[Squeeze through the cracks. | psf room]]</tw-passagedata><tw-passagedata pid="53" name="right2" tags="" position="350,725" size="100,100">There is just a garbage can... How can you accumulate trash underwater...?
+[[Go back. | left 2]]</tw-passagedata><tw-passagedata pid="54" name="psf room" tags="" position="475,725" size="100,100">Within, there is a pile of extra pellets. Proof PSF has actually lied. 
 There is plenty of food to go around. What does he need all this for?
 
 There is another door in this room... Maybe it is an exit?
-[[Leave the room. | leavepsf]]</tw-passagedata><tw-passagedata pid="22" name="leavepsf" tags="" position="225,350" size="100,100">[[LEFT | left3]]
-[[RIGHT | right3]]</tw-passagedata><tw-passagedata pid="23" name="left3" tags="" position="350,350" size="100,100">You hear Orangey and Mr. Carnival coming... You need to go the other way... ASAP.
-[[Go back. | right3]]</tw-passagedata><tw-passagedata pid="24" name="right3" tags="" position="475,350" size="100,100">Whew... you see the light... It is an exit!
-[[Finally!|exit]]</tw-passagedata><tw-passagedata pid="25" name="exit" tags="" position="600,350" size="100,100">[[I need to warn the others...|warn]]
-[[I should find a place to hide...|hide]]</tw-passagedata><tw-passagedata pid="26" name="hide" tags="" position="725,350" size="100,100">You swiftly exit the Palace out of the back entrance. There is a rock structure closeby.
+[[Leave the room. | leavepsf]]</tw-passagedata><tw-passagedata pid="55" name="leavepsf" tags="" position="600,725" size="100,100">[[LEFT | left3]]
+[[RIGHT | right3]]</tw-passagedata><tw-passagedata pid="56" name="left3" tags="" position="725,725" size="100,100">You hear Orangey and Mr. Carnival coming... You need to go the other way... ASAP.
+[[Go back. | right3]]</tw-passagedata><tw-passagedata pid="57" name="right3" tags="" position="850,725" size="100,100">Whew... you see the light... It is an exit!
+[[Finally!|exit]]</tw-passagedata><tw-passagedata pid="58" name="exit" tags="" position="975,725" size="100,100">[[I need to warn the others...|warn]]
+[[I should find a place to hide...|hide]]</tw-passagedata><tw-passagedata pid="59" name="hide" tags="" position="1100,725" size="100,100">You swiftly exit the Palace out of the back entrance. There is a rock structure closeby.
 You squeeze in between two of the stones. Surely he can&#39;t see you here.
 
-[[&gt;&gt;&gt; |controck]]</tw-passagedata><tw-passagedata pid="27" name="controck" tags="" position="850,350" size="100,100">You finally catch your breath for a moment. That is... until...
+[[&gt;&gt;&gt; |controck]]</tw-passagedata><tw-passagedata pid="60" name="controck" tags="" position="1225,725" size="100,100">You finally catch your breath for a moment. That is... until...
 
 PSF: Hey! Shrimpy! You thought you could hide from me huh... It is honestly a little pathetic... 
 Right next to the exit? Really? Whatever... I am starving.
@@ -313,7 +317,7 @@ Right next to the exit? Really? Whatever... I am starving.
 And in an instant... Your short shrimp life flashes before your eyes.
 It is all over...
 
-[[What went wrong...?|Start]]</tw-passagedata><tw-passagedata pid="28" name="unite" tags="" position="975,350" size="100,100">You, the shrimp colony, and the snails head up to the palace steps. The snails form a line in front of the shrimp.
+[[What went wrong...?|Start]]</tw-passagedata><tw-passagedata pid="61" name="unite" tags="" position="100,850" size="100,100">You, the shrimp colony, and the snails head up to the palace steps. The snails form a line in front of the shrimp.
 
 You: Come out Prince Shiny Fins! It is time to take accountability for your wrongdoing!
 PSF comes out of the palace doorway.
@@ -371,7 +375,7 @@ Until... they start saying their goodbyes to you...
 You drift away peacefully...
 Shrimp heaven is quite nice.
 
-You won the game.</tw-passagedata><tw-passagedata pid="29" name="pleco" tags="" position="1100,350" size="100,100">You swim over to a large pleco slurping on some algae on the glass.
+You won the game.</tw-passagedata><tw-passagedata pid="62" name="pleco" tags="" position="225,850" size="100,100">You swim over to a large pleco slurping on some algae on the glass.
 You: Hello! I thought I would introduce myself. I am &lt;&lt;print $name&gt;&gt;. I am new here.
 Pleco: Ahh.. I heard there would be a new shrimp in the tank since the incident. Nice to meet you kid.
 

@@ -9,7 +9,8 @@
 Bottom Dweller
 
 :: StoryInit
-
+<<set $algaecleaned to 0>>
+<<set $greenbean to 0>>
 [[Continue|meters2]]
 
 :: Start
@@ -18,47 +19,56 @@ From as early as you can remember, you’ve been in Frankie’s Fish and Feed.
 You have always been comfortable in your small tank because you were surrounded by some of my best shrimpy friends. 
 There are a few snails in your tank as well, but they don’t speak much, so you usually leave them be. 
 
+[[>>>| intro1]]
+:: intro1
 Today started out just like any other day,  until a net splashed into your tank. 
 You attempted to swim away, but it scooped you up. 
 You are placed in a plastic bag with some of your tank water. 
 You didn’t even get to say goodbye to your friends…
-
+[[>>>|intro2]]
+:: intro2
 The next few moments are a blur. 
 You can only see the reflective plastic. 
 You are shuffled around a bit, and suddenly, your bag is placed in an area with familiar walls. 
 It is another tank, but it isn’t your home.
-
+[[>>>|intro3]]
+:: intro3
 As you peer through the plastic, you can't help but to notice a beautiful, bustling tank. 
 There are many snails, fish, and even other shrimp. 
 You finally relax a bit. You realize quickly this will be your new home. 
 You try to get comfortable as the water temperature changes slowly…
 
+[[Time to catch some Zs... | intro4]]
+:: intro4
 *tap tap tap*
+
 You suddenly awaken to 3 goldfish staring at you from outside the plastic.
-PSF: “Welcome newcomer! Quite interesting, you are alone. Usually the shrimpies come with some friends…”
+Prince Shiny Fins: Welcome newcomer! Quite interesting, you are alone. Usually the shrimpies come with some friends…
 
-Orangey: “At least we have a replacement… Since the incident…”
+Orangey: At least we have a replacement… Since the incident…
 
-SPF: “Let’s not delve into that right now! We don’t want to scare him! I am sorry kiddo…. How rude of me I didn’t even ask for your name!”
+Prince Shiny Fins: Let’s not delve into that right now! We don’t want to scare him! I am sorry kiddo…. How rude of me I didn’t even ask for your name!
 <<textbox "$name" "" "continue1">>
 
 :: continue1
-<<say 'Prince Shiny Fins'>> Hmm… That’s interesting! I am Prince Shiny Fins, and I am the elected leader of this tank. Now <<print $name>>, let me explain some of the rules here! <</say>>
+Hmm… That’s interesting! I am Prince Shiny Fins, and I am the elected leader of this tank. Now <<print $name>>, let me explain some of the rules here! 
 
-<<say '$name'>> Rules? <</say>>
+[[Rules? | psf1]]
 
-<<say 'Prince Shiny Fins'>> Ah yes! We have a very advanced society here, and we know you will come to really love it here! As a shrimp, you have a selection of duties you must perform in order to keep up the scenery and ensure our tank is kept pristine! In exchange for doing tasks, you will be rewarded through our Pellet system. Once the big boss comes through with the Pellets, we will divide them out equally amongst our working residents. I will explain more after you finally enter the tank. Once the Boss finally lets you in, be sure to see me in the Palace. I will explain some of the benefits in more detail. <</say>>
+::psf1
+Ah yes! We have a very advanced society here, and we know you will come to really love it here! As a shrimp, you have a selection of duties you must perform in order to keep up the scenery and ensure our tank is kept pristine! In exchange for doing tasks, you will be rewarded through our Pellet system. Once the big boss comes through with the Pellets, we will divide them out equally amongst our working residents. I will explain more after you finally enter the tank. Once the Boss finally lets you in, be sure to see me in the Palace. I will explain some of the benefits in more detail.
 
-<<say 'Orangey'>> “We are truly sooo excited to really get to know you!” <</say>>
+Orangey: We are truly sooo excited to really get to know you!
 
-<<say '$name'>> Okay! That is a lot to take in but I am sure I will get used to it!<</say>>
+[[Okay! That is a lot to take in but I am sure I will get used to it!|psf2]]
+:: psf2
+Prince Shiny Fins: “Surely! See you soon shrimpy!”
 
-GF: “Surely! See you soon shrimpy!”
-
-——
+[[>>>|sometime]]
+:: sometime
 Some time passes, and suddenly, huge hands open the lid of the tank. The Boss cuts open the plastic bag and slips you into the tank. The water is nice and warm. It has a different flavor that what you are used to, but it isn’t that bad.
 
-You: Alrighty… Where should I go first…
+Alrighty… Where should you go first…
 
 [[Meet the snails | bubblevillage]]
 [[Meet the shrimp | fernpark]]
